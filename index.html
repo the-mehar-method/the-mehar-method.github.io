@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mehar Method | Elite Visual IGCSE Biology Tutoring</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset & Variables */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --forest-deep: #0d2318;
+            --forest-mid: #1a3d2c;
+            --sage-deep: #2c5941;
+            --sage-medium: #4a7c62;
+            --sage-light: #7ca992;
+            --pastel-moss: #b3cfbf;
+            --pastel-mint: #daf0e4;
+            --cream-soft: #f4f9f6;
+            
+            --font-display: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at 10% 20%, #e8f3ed 0%, #cbdcd3 40%, #8ba395 100%);
+            background-attachment: fixed;
+            color: var(--forest-deep);
+            font-family: var(--font-display);
+            line-height: 1.6;
+            padding-bottom: 60px;
+            position: relative;
+        }
+
+        .bg-artwork {
+            position: absolute;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .art-heart { top: 15%; right: 5%; width: 320px; }
+        .art-brain { top: 45%; left: 2%; width: 340px; }
+        .art-dna { top: 75%; right: 3%; width: 280px; }
+
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        header {
+            background-color: rgba(218, 240, 228, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(13, 35, 24, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .brand-logo {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--forest-deep);
+        }
+
+        .brand-logo span { color: var(--sage-deep); font-weight: 800; }
+
+        .header-badge {
+            background: rgba(13, 35, 24, 0.06);
+            border: 1px solid rgba(13, 35, 24, 0.12);
+            color: var(--forest-deep);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 34px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 14.5px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            text-align: center;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--forest-mid) 0%, var(--forest-deep) 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 18px rgba(13, 35, 24, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(13, 35, 24, 0.35);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.5);
+            color: var(--forest-deep);
+            border: 1px solid rgba(13, 35, 24, 0.15);
+            backdrop-filter: blur(8px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.75);
+            transform: translateY(-2px);
+        }
+
+        .hero-block { padding: 100px 0 70px 0; text-align: center; }
+
+        .hero-tagline {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--forest-mid) 0%, var(--forest-deep) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 25px rgba(13, 35, 24, 0.15);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.15;
+            color: var(--forest-deep);
+            max-width: 900px;
+            margin: 0 auto 26px auto;
+        }
+
+        .hero-subtext {
+            font-size: 19px;
+            color: var(--forest-mid);
+            max-width: 780px;
+            margin: 0 auto 48px auto;
+            font-weight: 500;
+            line-height: 1.65;
+        }
+
+        .hero-buttons-container { display: flex; gap: 18px; justify-content: center; align-items: center; }
+
+        .section-wrapper { padding: 100px 0; border-top: 1px solid rgba(13, 35, 24, 0.06); }
+        .section-title-box { text-align: center; margin-bottom: 60px; }
+        .main-title { font-size: 38px; font-weight: 800; color: var(--forest-deep); letter-spacing: -1px; margin-bottom: 16px; }
+        .sub-title { color: var(--forest-mid); font-size: 17px; max-width: 640px; margin: 0 auto; font-weight: 500; }
+
+        .cards-layout-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+
+        @media (max-width: 768px) {
+            .cards-layout-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 38px; }
+            .hero-buttons-container { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+
+        .glass-showcase-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.25) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            box-shadow: 0 12px 36px rgba(13, 35, 24, 0.03);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-showcase-card:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.4) 100%);
+            box-shadow: 0 20px 45px rgba(13, 35, 24, 0.07);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .card-icon-container {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--pastel-moss) 0%, var(--sage-light) 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 26px;
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.3);
+        }
+
+        .card-icon-container svg { width: 26px; height: 26px; fill: var(--forest-deep); }
+        .glass-showcase-card h3 { font-size: 21px; font-weight: 700; color: var(--forest-deep); margin-bottom: 14px; letter-spacing: -0.3px; }
+        .glass-showcase-card p { color: var(--forest-mid); font-size: 15px; line-height: 1.65; font-weight: 500; }
+
+        .notes-preview-box {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.35) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+            margin-bottom: 40px;
+        }
+
+        .notes-header-flex { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(13, 35, 24, 0.08); padding-bottom: 24px; margin-bottom: 32px; }
+        @media (max-width: 600px) { .notes-header-flex { flex-direction: column; align-items: flex-start; gap: 16px; } }
+        .notes-header-flex h3 { font-size: 26px; font-weight: 800; color: var(--forest-deep); }
+        .notes-price-tag { background: var(--forest-deep); color: #fff; padding: 8px 18px; border-radius: 30px; font-weight: 700; font-size: 15px; }
+        .notes-features-summary { font-size: 16px; color: var(--forest-mid); line-height: 1.7; font-weight: 500; margin-bottom: 24px; }
+
+        .admissions-gradient-card {
+            max-width: 640px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(240, 247, 243, 0.4) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 30px 60px rgba(13, 35, 24, 0.05);
+            border-radius: 24px;
+            padding: 60px 45px;
+            position: relative;
+            backdrop-filter: blur(16px);
+        }
+
+        .price-display-box { text-align: center; margin-bottom: 40px; }
+        .price-large-title { font-size: 58px; font-weight: 900; color: var(--forest-deep); letter-spacing: -2px; }
+        .price-large-title span { font-size: 18px; color: var(--sage-deep); font-weight: 600; }
+
+        .syllabus-bullets { list-style: none; margin-bottom: 40px; }
+        .syllabus-bullets li { font-size: 15.5px; font-weight: 500; padding: 12px 0; color: var(--forest-deep); display: flex; align-items: center; border-bottom: 1px solid rgba(13, 35, 24, 0.05); }
+        .syllabus-bullets li::before { content: "✓"; margin-right: 14px; font-size: 16px; font-weight: 800; color: var(--sage-deep); }
+
+        .form-input-field {
+            width: 100%;
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(13, 35, 24, 0.12);
+            background: rgba(255, 255, 255, 0.6);
+            color: var(--forest-deep);
+            font-family: inherit;
+            font-size: 14.5px;
+            margin-bottom: 18px;
+            transition: all 0.25s ease;
+        }
+
+        .form-input-field:focus { outline: none; border-color: var(--sage-deep); background: #ffffff; box-shadow: 0 0 0 4px rgba(44, 89, 65, 0.08); }
+
+        select.form-input-field {
+            appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%230d2318'><path d='M7 10l5 5 5-5z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            cursor: pointer;
+        }
+
+        /* Success Card Inline Toggles */
+        .thankyou-wrapper {
+            display: none;
+            text-align: center;
+        }
+
+        .icon-seal {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, #2c5941 0%, #0d2318 100%);
+            color: #ffffff;
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 28px auto;
+            box-shadow: 0 10px 20px rgba(13, 35, 24, 0.15);
+        }
+
+        .thankyou-wrapper h3 { font-size: 34px; font-weight: 800; letter-spacing: -1px; margin-bottom: 16px; color: var(--forest-deep); }
+        .thankyou-wrapper p { font-size: 16px; color: var(--forest-mid); font-weight: 500; margin-bottom: 24px; line-height: 1.6; }
+        
+        .subtext-notice {
+            display: block;
+            font-size: 13px;
+            color: var(--sage-deep);
+            background: rgba(44, 89, 65, 0.06);
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .mentor-profile-box {
+            background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest-mid) 100%);
+            color: var(--pastel-mint);
+            border-radius: 24px;
+            padding: 60px;
+            max-width: 880px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+            box-shadow: 0 25px 50px rgba(13, 35, 24, 0.15);
+        }
+
+        @media (max-width: 650px) { .mentor-profile-box { flex-direction: column; text-align: center; padding: 40px 24px; } }
+        .mentor-avatar-icon { width: 100px; height: 100px; background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .mentor-content h4 { font-size: 28px; font-weight: 800; margin-bottom: 6px; color: #ffffff; letter-spacing: -0.5px; }
+        .mentor-content .mentor-sub-marker { color: var(--pastel-moss); font-size: 15px; font-weight: 600; margin-bottom: 20px; display: block; text-transform: uppercase; letter-spacing: 0.5px; }
+        .mentor-content p { color: rgba(218, 240, 228, 0.88); font-size: 16px; line-height: 1.75; }
+
+        .faq-block { max-width: 750px; margin: 0 auto; }
+        .faq-row { background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.15) 100%); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 12px; padding: 22px 26px; margin-bottom: 16px; backdrop-filter: blur(8px); }
+        .faq-head { font-size: 16.5px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; color: var(--forest-deep); }
+        .faq-head::after { content: "▾"; color: var(--forest-mid); font-size: 18px; }
+        .faq-body { color: var(--forest-mid); font-size: 14.5px; margin-top: 12px; line-height: 1.6; font-weight: 500; }
+
+        footer { text-align: center; padding: 60px 0; color: var(--pastel-mint); font-size: 14.5px; border-top: 1px solid rgba(13, 35, 24, 0.1); background: var(--forest-deep); margin-top: 100px; }
+    </style>
+</head>
+<body>
+
+    <svg class="bg-artwork art-heart" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,30 C40,15 15,20 15,45 C15,70 50,90 50,90 C50,90 85,70 85,45 C85,20 60,15 50,30 Z" fill="none" stroke="#1a3d2c" stroke-width="1.5"/><path d="M42,22 L42,12 M58,22 L58,10" stroke="#1a3d2c" stroke-width="1.5"/></svg>
+    <svg class="bg-artwork art-brain" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,20 C35,20 25,30 25,45 C25,55 30,60 35,65 C38,70 42,78 50,78 C58,78 62,70 65,65 C70,60 75,55 75,45 C75,30 65,20 50,20 Z" fill="none" stroke="#1a3d2c" stroke-width="1.5" stroke-dasharray="4,4"/><path d="M50,20 L50,78 M25,45 C35,45 40,40 50,45 C60,40 65,45 75,45" fill="none" stroke="#1a3d2c" stroke-width="1"/></svg>
+    <svg class="bg-artwork art-dna" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M30,10 Q50,50 70,10 M30,90 Q50,50 70,90" fill="none" stroke="#1a3d2c" stroke-width="1.5"/><line x1="38" y1="25" x2="62" y2="25" stroke="#1a3d2c" stroke-width="1"/><line x1="46" y1="45" x2="54" y2="45" stroke="#1a3d2c" stroke-width="1"/><line x1="38" y1="75" x2="62" y2="75" stroke="#1a3d2c" stroke-width="1"/></svg>
+
+    <header>
+        <div class="container header-wrap">
+            <div class="brand-logo">The Mehar <span>Method</span></div>
+            <div class="header-badge">IGCSE Ecosystem</div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="hero-block">
+            <div class="hero-tagline">🌿 10 Slots Maximum Limit • Commencing 15th July</div>
+            <h1>Stop Memorizing Textbooks.<br>Master Biology Visually.</h1>
+            <p class="hero-subtext">Welcome to a learning environment tailored for any student of any calibre. Whether you are finding the content overwhelming or aiming to become a biology Olympian, my explanations and custom tutoring strategies are engineered to make you completely master the subject, turning complex biology into clear visual clarity.</p>
+            <div class="hero-buttons-container">
+                <a href="#register" class="btn btn-primary">Claim Your Free Masterclass Seat</a>
+                <a href="#notes-hub" class="btn btn-secondary">Explore Sample Notes</a>
+            </div>
+        </section>
+
+        <section class="section-wrapper" id="notes-hub">
+            <div class="section-title-box">
+                <h2 class="main-title">The Graphic Advantage</h2>
+                <p class="sub-title">Bridging the gap between rigid syllabus requirements and spatial memory vectors, built intentionally around keyword accuracy.</p>
+            </div>
+            
+            <div class="notes-preview-box">
+                <div class="notes-header-flex">
+                    <h3>The Master Visual Note Packs</h3>
+                    <div class="notes-price-tag">$10 / Complete Set</div>
+                </div>
+                <p class="notes-features-summary">
+                    Completely in-depth yet highly concise, these note packets cut directly through textbook noise. Every illustration, metabolic flowchart, and cellular system map is calibrated seamlessly with marking criteria so you retain exactly what counts.
+                </p>
+            </div>
+
+            <div class="cards-layout-grid">
+                <div class="glass-showcase-card">
+                    <div class="card-icon-container">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                    </div>
+                    <h3>In-Depth Yet Concise</h3>
+                    <p>Entire textbook sub-units are neatly structured down into modular tracking summaries that leave zero core biological concepts omitted.</p>
+                </div>
+                <div class="glass-showcase-card">
+                    <div class="card-icon-container">
+                        <svg viewBox="0 0 24 24"><path d="M12 21.35L10.55,20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.41 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.59 3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.04L12,21.35Z"/></svg>
+                    </div>
+                    <h3>Anatomical Precision</h3>
+                    <p>Clean vector lines outlining physiological loops (Vascular channels, Reflex coordinates, Gene pairs) for effortless spatial retention.</p>
+                </div>
+                <div class="glass-showcase-card">
+                    <div class="card-icon-container">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+                    </div>
+                    <h3>Marking Scheme Match</h3>
+                    <p>Every single map element traces standard examiner marking trends directly, showing you the vital keywords to target on paper.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrapper" id="register">
+            <div class="section-title-box">
+                <h2 class="main-title">Join the Ecosystem</h2>
+                <p class="sub-title">Secure custom resources or apply for direct accelerated interactive batches below.</p>
+            </div>
+            
+            <div class="admissions-gradient-card">
+                <div id="main-form-view">
+                    <div class="price-display-box">
+                        <div class="price-large-title">$10 <span>/ Resource Unit Base</span></div>
+                        <p style="color: var(--sage-deep); font-weight: 600; margin-top: 6px; font-size: 14.5px;">Tutoring Track: $10/Hr &bull; Complete Visual Notes: $10</p>
+                    </div>
+                    
+                    <ul class="syllabus-bullets">
+                        <li>4 Weekly Live Accelerated Whiteboard Masterclasses</li>
+                        <li>Restricted Access Google Docs Reference Study Packs</li>
+                        <li>Direct Direct-Access WhatsApp Messenger Channel with Mehar</li>
+                        <li>Topic Evaluation Folders Mapped to Examiner Keyword Strings</li>
+                    </ul>
+
+                    <form id="github-native-form">
+                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
+                        <input type="hidden" name="subject" value="New Mehar Method Application Submitted" />
+                        <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+                        <div>
+                            <input type="text" name="name" class="form-input-field" placeholder="Student Full Name" required>
+                        </div>
+                        <div>
+                            <input type="email" name="email" class="form-input-field" placeholder="Parent/Student Email Address" required>
+                        </div>
+                        <div>
+                            <select name="registration_type" class="form-input-field" required>
+                                <option value="" disabled selected>Select what you are registering for:</option>
+                                <option value="Live Interactive Lessons">Live Accelerated Interactive Lessons ($10/Hour)</option>
+                                <option value="Complete Visual Note Packs">Complete Visual Note Packs ($10 One-time)</option>
+                                <option value="Both Lessons and Notes">Full Track Bundle: Both Lessons & Notes</option>
+                            </select>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%; border: none; font-size: 15px; margin-top: 8px;">Submit Application</button>
+                    </form>
+                </div>
+
+                <div id="success-message-view" class="thankyou-wrapper">
+                    <div class="icon-seal">✓</div>
+                    <h3>Application Secured</h3>
+                    <p>Thank you for registering! Your application details have been safely locked directly into our system parameters.</p>
+                    <span class="subtext-notice">🕒 Note: Due to high demand and manual slot allocation, it may take up to 1 business day for Mehar to review your request and send access coordinates to your email.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrapper">
+            <div class="mentor-profile-box">
+                <div class="mentor-avatar-icon">🌿</div>
+                <div class="mentor-content">
+                    <h4>Meet Your Mentor</h4>
+                    <span class="mentor-sub-marker">Architect of The Mehar Method</span>
+                    <p>
+                        Hi, I'm Mehar. Having achieved an A* in IGCSE Biology, I founded this platform to change how we interact with science. As a high school student aspiring to become a biology Olympian, my mission is to spread deep conceptual knowledge to peers. The Mehar Method eliminates dense, passive text in favor of vibrant, highly integrated visual frameworks that make academic breakthroughs natural.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrapper">
+            <div class="section-title-box">
+                <h2 class="main-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-block">
+                <div class="faq-row">
+                    <div class="faq-head">Can I share the downloaded notes with my classmates?</div>
+                    <div class="faq-body">To protect the incredible amount of work that goes into creating these visual sets, sharing and redistribution are restricted. We kindly request that every student uses their own personal account dashboard to view the materials.</div>
+                </div>
+                <div class="faq-row">
+                    <div class="faq-head">How is file access managed for the study packs?</div>
+                    <div class="faq-body">All premium review packages are shared via secure, restricted-access Google Docs channels. View-only permissions are carefully configured with background downloading, printing, and direct text-copying completely disabled to keep the files safe while allowing crisp onscreen reading.</div>
+                </div>
+                <div class="faq-row">
+                    <div class="faq-head">What happens if I miss a live whiteboard session?</div>
+                    <div class="faq-body">No worries at all! Every single one of our 4 weekly live sessions is recorded in crisp high-definition and uploaded automatically to your cloud storage folder within 2 hours so you can rewatch it at your own pace.</div>
+                </div>
+                <div class="faq-row">
+                    <div class="faq-head">Are these notes helpful for any high school exam tier?</div>
+                    <div class="faq-body">Yes, absolutely. Because the summaries are designed to teach rich conceptual biology rather than encourage simple blind memorization, they are universally incredibly helpful for IGCSE, GCSE, O-Levels, and early advanced preparation pathways.</div>
+                </div>
+                <div class="faq-row">
+                    <div class="faq-head">How do the active marking scheme keyword matches work?</div>
+                    <div class="faq-body">Instead of using dense text blocks, our map layouts color-code the precise terminology parameters required by major board examiners. This shows you exactly how to structure your answers to guarantee maximum points.</div>
+                </div>
+                <div class="faq-row">
+                    <div class="faq-head">Can I reach out with personal questions outside of class?</div>
+                    <div class="faq-body">Definitely! Every registered cohort student receives a direct backchannel invitation link to Mehar's academic WhatsApp profile for quick asynchronous conceptual clarifications whenever you hit a bump in your study schedule.</div>
+                </div>
+                <div class="faq-row">
+                    <div class="faq-head">How are payments processed for the weekly classes?</div>
+                    <div class="faq-body">Classes are tracked neatly at $10 per interactive student hour and are billed as transparent, recurring monthly packages so families can easily plan and manage their academic supplement schedules.</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 The Mehar Method. Custom Built for IGCSE Biology Standards. Hosted via GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('github-native-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Processing Application...";
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                if (response.status == 200) {
+                    document.getElementById("main-form-view").style.display = "none";
+                    document.getElementById("success-message-view").style.display = "block";
+                } else {
+                    let jsonRes = await response.json();
+                    alert(jsonRes.message);
+                    resetSubmitButton();
+                }
+            })
+            .catch(error => {
+                alert("Network submission error. Please try again.");
+                resetSubmitButton();
+            });
+        });
+
+        function resetSubmitButton() {
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Submit Application";
+        }
+    </script>
+
+</body>
+</html>
