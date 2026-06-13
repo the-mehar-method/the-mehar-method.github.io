@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Mehar Method | Elite Visual IGCSE Biology Tutoring</title>
     
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,11 +47,14 @@
             opacity: 0.08;
             pointer-events: none;
             z-index: 0;
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
         }
         
-        .art-heart { top: 15%; right: 5%; width: 320px; }
-        .art-brain { top: 45%; left: 2%; width: 340px; }
-        .art-dna { top: 75%; right: 3%; width: 280px; }
+        .art-heart { top: 15%; right: 5%; }
+        .art-brain { top: 45%; left: 2%; }
+        .art-dna { top: 75%; right: 3%; }
 
         .container {
             width: 100%;
@@ -96,6 +99,9 @@
             border-radius: 30px;
             font-size: 13px;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .btn {
@@ -137,7 +143,8 @@
         .hero-block { padding: 100px 0 70px 0; text-align: center; }
 
         .hero-tagline {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             background: linear-gradient(135deg, var(--forest-mid) 0%, var(--forest-deep) 100%);
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 10px 25px rgba(13, 35, 24, 0.15);
@@ -147,6 +154,7 @@
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 32px;
+            gap: 8px;
         }
 
         h1 {
@@ -290,7 +298,7 @@
         }
 
         @media (max-width: 650px) { .mentor-profile-box { flex-direction: column; text-align: center; padding: 40px 24px; } }
-        .mentor-avatar-icon { width: 100px; height: 100px; background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .mentor-avatar-icon { width: 100px; height: 100px; background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
         .mentor-content h4 { font-size: 28px; font-weight: 800; margin-bottom: 6px; color: #ffffff; letter-spacing: -0.5px; }
         .mentor-content .mentor-sub-marker { color: var(--pastel-moss); font-size: 15px; font-weight: 600; margin-bottom: 20px; display: block; text-transform: uppercase; letter-spacing: 0.5px; }
         .mentor-content p { color: rgba(218, 240, 228, 0.88); font-size: 16px; line-height: 1.75; }
@@ -306,21 +314,27 @@
 </head>
 <body>
 
-    <svg class="bg-artwork art-heart" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,30 C40,15 15,20 15,45 C15,70 50,90 50,90 C50,90 85,70 85,45 C85,20 60,15 50,30 Z" fill="none" stroke="#1a3d2c" stroke-width="1.5"/><path d="M42,22 L42,12 M58,22 L58,10" stroke="#1a3d2c" stroke-width="1.5"/></svg>
-    <svg class="bg-artwork art-brain" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,20 C35,20 25,30 25,45 C25,55 30,60 35,65 C38,70 42,78 50,78 C58,78 62,70 65,65 C70,60 75,55 75,45 C75,30 65,20 50,20 Z" fill="none" stroke="#1a3d2c" stroke-width="1.5" stroke-dasharray="4,4"/><path d="M50,20 L50,78 M25,45 C35,45 40,40 50,45 C60,40 65,45 75,45" fill="none" stroke="#1a3d2c" stroke-width="1"/></svg>
-    <svg class="bg-artwork art-dna" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M30,10 Q50,50 70,10 M30,90 Q50,50 70,90" fill="none" stroke="#1a3d2c" stroke-width="1.5"/><line x1="38" y1="25" x2="62" y2="25" stroke="#1a3d2c" stroke-width="1"/><line x1="46" y1="45" x2="54" y2="45" stroke="#1a3d2c" stroke-width="1"/><line x1="38" y1="75" x2="62" y2="75" stroke="#1a3d2c" stroke-width="1"/></svg>
+    <img class="bg-artwork art-heart" src="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579" alt="Background Logo Vector">
+    <img class="bg-artwork art-brain" src="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579" alt="Background Logo Vector">
+    <img class="bg-artwork art-dna" src="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579" alt="Background Logo Vector">
 
     <header>
         <div class="container header-wrap">
             <div class="brand-logo">The Mehar <span>Method</span></div>
-            <div class="header-badge">IGCSE Ecosystem</div>
+            <div class="header-badge">
+                <img src="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579" style="width: 14px; height: 14px;" alt="Logo">
+                IGCSE Ecosystem
+            </div>
         </div>
     </header>
 
     <main class="container">
         
         <section class="hero-block">
-            <div class="hero-tagline">🌿 10 Slots Maximum Limit • Commencing 15th July</div>
+            <div class="hero-tagline">
+                <img src="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579" style="height: 16px; width: 16px; object-fit: contain;" alt="Logo">
+                10 Slots Maximum Limit • Commencing 15th July
+            </div>
             <h1>Stop Memorizing Textbooks.<br>Master Biology Visually.</h1>
             <p class="hero-subtext">Welcome to a learning environment tailored for any student of any calibre. Whether you are finding the content overwhelming or aiming to become a biology Olympian, my explanations and custom tutoring strategies are engineered to make you completely master the subject, turning complex biology into clear visual clarity.</p>
             <div class="hero-buttons-container">
@@ -413,7 +427,9 @@
 
         <section class="section-wrapper">
             <div class="mentor-profile-box">
-                <div class="mentor-avatar-icon">🌿</div>
+                <div class="mentor-avatar-icon">
+                    <img src="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579" style="width: 100%; height: 100%; object-fit: cover;" alt="Mentor Profile Logo">
+                </div>
                 <div class="mentor-content">
                     <h4>Meet Your Mentor</h4>
                     <span class="mentor-sub-marker">Architect of The Mehar Method</span>
