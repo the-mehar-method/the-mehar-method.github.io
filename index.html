@@ -23,24 +23,26 @@
         }
 
         :root {
-            /* Restored original warm green values precisely */
-            --forest-deep: #0d2318;
-            --forest-mid: #1a3d2c;
-            --sage-deep: #2c5941;
-            --sage-medium: #4a7c62;
-            --sage-light: #7ca992;
-            --pastel-moss: #b1cfbe;
-            --pastel-mint: #dbebe2;
-            --cream-soft: #f4f8f6;
+            /* Perfectly tuned cold bluey-greens that seamlessly sync with your logo artwork */
+            --forest-deep: #091e16;
+            --forest-mid: #123326;
+            --sage-deep: #1d4e3a;
+            --sage-medium: #337357;
+            --sage-light: #6aa88a;
+            --pastel-moss: #acd2be;
+            --pastel-mint: #d4eae0;
+            --cream-soft: #f2f7f5;
             
-            /* Lightened box color - shifted right towards a brighter sage green shade */
-            --box-lightened: #22563c;
+            /* The requested teeny bit lighter box shade (shifted fully right to blue-green spectrum) */
+            --box-lightened-start: #235d45;
+            --box-lightened-end: #164330;
             
             --font-display: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
-            background: radial-gradient(circle at 10% 20%, #f4f8f6 0%, #e4edd9 42%, #bcd3c7 100%);
+            /* Crisp bluey-green gradient sweep background */
+            background: radial-gradient(circle at 10% 20%, #f2f7f5 0%, #dae9e2 45%, #b1cfc0 100%);
             background-attachment: fixed;
             color: var(--forest-deep);
             font-family: var(--font-display);
@@ -57,7 +59,7 @@
             width: 320px;
             height: 320px;
             object-fit: contain;
-            mix-blend-mode: multiply; /* Keeps background artwork fully transparent */
+            mix-blend-mode: multiply; /* Removes all white logo blocks natively */
         }
         
         .art-heart { top: 12%; right: 6%; }
@@ -74,10 +76,10 @@
         }
 
         header {
-            background-color: rgba(219, 235, 226, 0.4);
+            background-color: rgba(212, 234, 224, 0.45);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(13, 35, 24, 0.08);
+            border-bottom: 1px solid rgba(9, 30, 22, 0.08);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -100,8 +102,8 @@
         .brand-logo span { color: var(--sage-deep); font-weight: 800; }
 
         .header-badge {
-            background: rgba(13, 35, 24, 0.05);
-            border: 1px solid rgba(13, 35, 24, 0.12);
+            background: rgba(9, 30, 22, 0.05);
+            border: 1px solid rgba(9, 30, 22, 0.12);
             color: var(--forest-deep);
             padding: 10px 20px;
             border-radius: 30px;
@@ -112,7 +114,7 @@
             gap: 12px;
         }
 
-        /* Large size preserved with background removal fix */
+        /* Large icon size with blend fix */
         .header-badge img {
             width: 32px !important;
             height: 32px !important;
@@ -137,23 +139,23 @@
         .btn-primary {
             background: linear-gradient(135deg, var(--forest-mid) 0%, var(--forest-deep) 100%);
             color: #ffffff;
-            box-shadow: 0 4px 18px rgba(13, 35, 24, 0.2);
+            box-shadow: 0 4px 18px rgba(9, 30, 22, 0.2);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(13, 35, 24, 0.35);
+            box-shadow: 0 10px 25px rgba(9, 30, 22, 0.35);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.6);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
             color: var(--forest-deep);
-            border: 1px solid rgba(13, 35, 24, 0.15);
+            border: 1px solid rgba(9, 30, 22, 0.15);
             backdrop-filter: blur(8px);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.85);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
             transform: translateY(-2px);
         }
 
@@ -164,7 +166,7 @@
             align-items: center;
             background: linear-gradient(135deg, var(--forest-mid) 0%, var(--forest-deep) 100%);
             border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 12px 30px rgba(13, 35, 24, 0.2);
+            box-shadow: 0 12px 30px rgba(9, 30, 22, 0.2);
             padding: 14px 28px;
             border-radius: 35px;
             font-size: 15px;
@@ -174,13 +176,13 @@
             gap: 14px;
         }
 
-        /* Large size preserved with background removal fix */
+        /* Large size with blend mode transparency mapping */
         .hero-tagline img {
             height: 34px !important;
             width: 34px !important;
             object-fit: contain;
             display: block;
-            mix-blend-mode: screen; /* Uses screen blending to pull pure white highlights natively into dark buttons */
+            mix-blend-mode: screen; 
         }
 
         h1 {
@@ -204,7 +206,7 @@
 
         .hero-buttons-container { display: flex; gap: 18px; justify-content: center; align-items: center; }
 
-        .section-wrapper { padding: 100px 0; border-top: 1px solid rgba(13, 35, 24, 0.06); }
+        .section-wrapper { padding: 100px 0; border-top: 1px solid rgba(9, 30, 22, 0.06); }
         .section-title-box { text-align: center; margin-bottom: 60px; }
         .main-title { font-size: 38px; font-weight: 800; color: var(--forest-deep); letter-spacing: -1px; margin-bottom: 16px; }
         .sub-title { color: var(--forest-mid); font-size: 17px; max-width: 640px; margin: 0 auto; font-weight: 500; }
@@ -218,10 +220,11 @@
             .btn { width: 100%; }
         }
 
+        /* Restored full original gradient mappings for glass containers */
         .glass-showcase-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.35) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.35) 100%);
             border: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 12px 36px rgba(13, 35, 24, 0.03);
+            box-shadow: 0 12px 36px rgba(9, 30, 22, 0.03);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             border-radius: 20px;
@@ -231,8 +234,8 @@
 
         .glass-showcase-card:hover {
             transform: translateY(-5px);
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.5) 100%);
-            box-shadow: 0 20px 45px rgba(13, 35, 24, 0.08);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 100%);
+            box-shadow: 0 20px 45px rgba(9, 30, 22, 0.08);
             border-color: rgba(255, 255, 255, 0.7);
         }
 
@@ -252,6 +255,7 @@
         .glass-showcase-card h3 { font-size: 21px; font-weight: 700; color: var(--forest-deep); margin-bottom: 14px; letter-spacing: -0.3px; }
         .glass-showcase-card p { color: var(--forest-mid); font-size: 15px; line-height: 1.65; font-weight: 500; }
 
+        /* Note packs gradient restored */
         .notes-preview-box {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.45) 100%);
             border: 1px solid rgba(255, 255, 255, 0.7);
@@ -261,18 +265,19 @@
             margin-bottom: 40px;
         }
 
-        .notes-header-flex { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(13, 35, 24, 0.08); padding-bottom: 24px; margin-bottom: 32px; }
+        .notes-header-flex { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(9, 30, 22, 0.08); padding-bottom: 24px; margin-bottom: 32px; }
         @media (max-width: 600px) { .notes-header-flex { flex-direction: column; align-items: flex-start; gap: 16px; } }
         .notes-header-flex h3 { font-size: 26px; font-weight: 800; color: var(--forest-deep); }
         .notes-price-tag { background: var(--forest-deep); color: #fff; padding: 8px 18px; border-radius: 30px; font-weight: 700; font-size: 15px; }
         .notes-features-summary { font-size: 16px; color: var(--forest-mid); line-height: 1.7; font-weight: 500; margin-bottom: 24px; }
 
+        /* Admissions pack card gradient restored */
         .admissions-gradient-card {
             max-width: 640px;
             margin: 0 auto;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(235, 245, 240, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(220, 238, 229, 0.5) 100%);
             border: 1px solid rgba(255, 255, 255, 0.7);
-            box-shadow: 0 30px 60px rgba(13, 35, 24, 0.05);
+            box-shadow: 0 30px 60px rgba(9, 30, 22, 0.05);
             border-radius: 24px;
             padding: 60px 45px;
             position: relative;
@@ -284,14 +289,14 @@
         .price-large-title span { font-size: 18px; color: var(--sage-deep); font-weight: 600; }
 
         .syllabus-bullets { list-style: none; margin-bottom: 40px; }
-        .syllabus-bullets li { font-size: 15.5px; font-weight: 500; padding: 12px 0; color: var(--forest-deep); display: flex; align-items: center; border-bottom: 1px solid rgba(13, 35, 24, 0.05); }
+        .syllabus-bullets li { font-size: 15.5px; font-weight: 500; padding: 12px 0; color: var(--forest-deep); display: flex; align-items: center; border-bottom: 1px solid rgba(9, 30, 22, 0.05); }
         .syllabus-bullets li::before { content: "✓"; margin-right: 14px; font-size: 16px; font-weight: 800; color: var(--sage-deep); }
 
         .form-input-field {
             width: 100%;
             padding: 16px;
             border-radius: 10px;
-            border: 1px solid rgba(13, 35, 24, 0.12);
+            border: 1px solid rgba(9, 30, 22, 0.12);
             background: rgba(255, 255, 255, 0.7);
             color: var(--forest-deep);
             font-family: inherit;
@@ -300,19 +305,19 @@
             transition: all 0.25s ease;
         }
 
-        .form-input-field:focus { outline: none; border-color: var(--sage-deep); background: #ffffff; box-shadow: 0 0 0 4px rgba(44, 89, 65, 0.08); }
+        .form-input-field:focus { outline: none; border-color: var(--sage-deep); background: #ffffff; box-shadow: 0 0 0 4px rgba(29, 78, 58, 0.08); }
 
         select.form-input-field {
             appearance: none;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%230d2318'><path d='M7 10l5 5 5-5z'/></svg>");
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23091e16'><path d='M7 10l5 5 5-5z'/></svg>");
             background-repeat: no-repeat;
             background-position: right 16px center;
             cursor: pointer;
         }
 
-        /* Adjusted box: lighter, rich medium green tone instead of the old extra dark value */
+        /* Beautifully lightened blue-green gradient box layout (no yellow elements!) */
         .mentor-profile-box {
-            background: linear-gradient(135deg, var(--box-lightened) 0%, var(--sage-deep) 100%);
+            background: linear-gradient(135deg, var(--box-lightened-start) 0%, var(--box-lightened-end) 100%);
             color: #ffffff;
             border-radius: 24px;
             padding: 60px;
@@ -321,7 +326,7 @@
             display: flex;
             align-items: center;
             gap: 45px;
-            box-shadow: 0 25px 50px rgba(13, 35, 24, 0.15);
+            box-shadow: 0 25px 50px rgba(9, 30, 22, 0.15);
         }
 
         @media (max-width: 650px) { .mentor-profile-box { flex-direction: column; text-align: center; padding: 40px 24px; } }
@@ -344,20 +349,21 @@
             width: 85%;
             height: 85%;
             object-fit: contain;
-            mix-blend-mode: multiply; /* Removes white framing from inside the profile badge */
+            mix-blend-mode: multiply; /* Drops white artifact edge halos dynamically */
         }
 
         .mentor-content h4 { font-size: 28px; font-weight: 800; margin-bottom: 6px; color: #ffffff; letter-spacing: -0.5px; }
         .mentor-content .mentor-sub-marker { color: var(--pastel-mint); font-size: 15px; font-weight: 600; margin-bottom: 20px; display: block; text-transform: uppercase; letter-spacing: 0.5px; }
-        .mentor-content p { color: rgba(255, 255, 255, 0.9); font-size: 16px; line-height: 1.75; }
+        .mentor-content p { color: rgba(255, 255, 255, 0.92); font-size: 16px; line-height: 1.75; }
 
+        /* FAQs gradient restored */
         .faq-block { max-width: 750px; margin: 0 auto; }
-        .faq-row { background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.25) 100%); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 12px; padding: 22px 26px; margin-bottom: 16px; backdrop-filter: blur(8px); }
+        .faq-row { background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.25) 100%); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 12px; padding: 22px 26px; margin-bottom: 16px; backdrop-filter: blur(8px); }
         .faq-head { font-size: 16.5px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; color: var(--forest-deep); }
         .faq-head::after { content: "▾"; color: var(--forest-mid); font-size: 18px; }
         .faq-body { color: var(--forest-mid); font-size: 14.5px; margin-top: 12px; line-height: 1.6; font-weight: 500; }
 
-        footer { text-align: center; padding: 60px 0; color: var(--pastel-mint); font-size: 14.5px; border-top: 1px solid rgba(13, 35, 24, 0.1); background: var(--forest-deep); margin-top: 100px; }
+        footer { text-align: center; padding: 60px 0; color: var(--pastel-mint); font-size: 14.5px; border-top: 1px solid rgba(9, 30, 22, 0.1); background: var(--forest-deep); margin-top: 100px; }
     </style>
 </head>
 <body>
