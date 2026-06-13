@@ -276,42 +276,6 @@
             cursor: pointer;
         }
 
-        /* Success Card Inline Toggles */
-        .thankyou-wrapper {
-            display: none;
-            text-align: center;
-        }
-
-        .icon-seal {
-            width: 72px;
-            height: 72px;
-            background: linear-gradient(135deg, #2c5941 0%, #0d2318 100%);
-            color: #ffffff;
-            font-size: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin: 0 auto 28px auto;
-            box-shadow: 0 10px 20px rgba(13, 35, 24, 0.15);
-        }
-
-        .thankyou-wrapper h3 { font-size: 34px; font-weight: 800; letter-spacing: -1px; margin-bottom: 16px; color: var(--forest-deep); }
-        .thankyou-wrapper p { font-size: 16px; color: var(--forest-mid); font-weight: 500; margin-bottom: 24px; line-height: 1.6; }
-        
-        .subtext-notice {
-            display: block;
-            font-size: 13px;
-            color: var(--sage-deep);
-            background: rgba(44, 89, 65, 0.06);
-            padding: 12px 16px;
-            border-radius: 8px;
-            margin-bottom: 16px;
-            font-weight: 600;
-            line-height: 1.5;
-            text-align: left;
-        }
-
         .mentor-profile-box {
             background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest-mid) 100%);
             color: var(--pastel-mint);
@@ -426,11 +390,7 @@
                         <li>Topic Evaluation Folders Mapped to Examiner Keyword Strings</li>
                     </ul>
 
-                    <form id="github-native-form">
-                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
-                        <input type="hidden" name="subject" value="New Mehar Method Application Submitted" />
-                        <input type="checkbox" name="botcheck" id="" style="display: none;" />
-
+                    <form action="https://formbold.com/s/oYAkq" method="POST">
                         <div>
                             <input type="text" name="name" class="form-input-field" placeholder="Student Full Name" required>
                         </div>
@@ -447,13 +407,6 @@
                         </div>
                         <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%; border: none; font-size: 15px; margin-top: 8px;">Submit Application</button>
                     </form>
-                </div>
-
-                <div id="success-message-view" class="thankyou-wrapper">
-                    <div class="icon-seal">✓</div>
-                    <h3>Application Secured</h3>
-                    <p>Thank you for registering! Your application details have been safely locked directly into our system parameters.</p>
-                    <span class="subtext-notice">🕒 Note: Due to high demand and manual slot allocation, it may take up to 1 business day for Mehar to review your request and send access coordinates to your email.</span>
                 </div>
             </div>
         </section>
@@ -514,50 +467,6 @@
             <p>&copy; 2026 The Mehar Method. Custom Built for IGCSE Biology Standards. Hosted via GitHub Pages.</p>
         </div>
     </footer>
-
-    <script>
-        const form = document.getElementById('github-native-form');
-        const submitBtn = document.getElementById('submit-btn');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            submitBtn.disabled = true;
-            submitBtn.innerText = "Processing Application...";
-
-            const formData = new FormData(form);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
-
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                if (response.status == 200) {
-                    document.getElementById("main-form-view").style.display = "none";
-                    document.getElementById("success-message-view").style.display = "block";
-                } else {
-                    let jsonRes = await response.json();
-                    alert(jsonRes.message);
-                    resetSubmitButton();
-                }
-            })
-            .catch(error => {
-                alert("Network submission error. Please try again.");
-                resetSubmitButton();
-            });
-        });
-
-        function resetSubmitButton() {
-            submitBtn.disabled = false;
-            submitBtn.innerText = "Submit Application";
-        }
-    </script>
 
 </body>
 </html>
