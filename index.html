@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Mehar Method | Elite Visual IGCSE Biology Tutoring</title>
     
-    <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579">
+    <link rel="apple-touch-icon" href="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,22 +23,22 @@
         }
 
         :root {
-            /* Cooled down palette to perfectly complement the blue-toned teal logo */
-            --forest-deep: #061b12;
-            --forest-mid: #0d2c20;
-            --sage-deep: #164432;
-            --sage-medium: #225c45;
-            --sage-light: #488b70;
-            --pastel-moss: #99cfb9;
-            --pastel-mint: #c6ebd9;
-            --cream-soft: #f1f8f5;
+            /* Cold, pristine arctic forest palette matching the blue-shifted teal logo */
+            --forest-deep: #031610;
+            --forest-mid: #082218;
+            --sage-deep: #123c2d;
+            --sage-medium: #1b533e;
+            --sage-light: #4c8f74;
+            --pastel-moss: #8bbfa8;
+            --pastel-mint: #aee3cb;
+            --cream-soft: #edf6f2;
             
             --font-display: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
-            /* Clean, modern slate-to-mint gradient matching the cold logo colors */
-            background: radial-gradient(circle at 10% 20%, #e3f2ec 0%, #b8dccb 40%, #7da693 100%);
+            /* Premium cold-shifted background radial sweep */
+            background: radial-gradient(circle at 10% 20%, #e1f4ec 0%, #aed3c2 40%, #729d89 100%);
             background-attachment: fixed;
             color: var(--forest-deep);
             font-family: var(--font-display);
@@ -46,7 +49,7 @@
 
         .bg-artwork {
             position: absolute;
-            opacity: 0.09;
+            opacity: 0.08;
             pointer-events: none;
             z-index: 0;
             width: 320px;
@@ -68,10 +71,10 @@
         }
 
         header {
-            background-color: rgba(198, 235, 217, 0.35);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(6, 27, 18, 0.08);
+            background-color: rgba(174, 227, 203, 0.35);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-bottom: 1px solid rgba(3, 22, 16, 0.08);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -81,7 +84,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 85px;
+            height: 90px;
         }
 
         .brand-logo {
@@ -94,22 +97,24 @@
         .brand-logo span { color: var(--sage-deep); font-weight: 800; }
 
         .header-badge {
-            background: rgba(6, 27, 18, 0.06);
-            border: 1px solid rgba(6, 27, 18, 0.12);
+            background: rgba(3, 22, 16, 0.06);
+            border: 1px solid rgba(3, 22, 16, 0.14);
             color: var(--forest-deep);
-            padding: 8px 18px;
+            padding: 10px 20px;
             border-radius: 30px;
-            font-size: 13.5px;
+            font-size: 14px;
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 10px; /* Increased spacing */
+            gap: 12px;
         }
 
+        /* Fixed the small dot appearance by establishing solid container block parameters */
         .header-badge img {
-            width: 24px; /* Scaled up from 14px so detail is visible */
-            height: 24px;
+            width: 32px !important;
+            height: 32px !important;
             object-fit: contain;
+            display: block;
         }
 
         .btn {
@@ -128,23 +133,23 @@
         .btn-primary {
             background: linear-gradient(135deg, var(--forest-mid) 0%, var(--forest-deep) 100%);
             color: #ffffff;
-            box-shadow: 0 4px 18px rgba(6, 27, 18, 0.2);
+            box-shadow: 0 4px 18px rgba(3, 22, 16, 0.2);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(6, 27, 18, 0.35);
+            box-shadow: 0 10px 25px rgba(3, 22, 16, 0.35);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.55);
+            background: rgba(255, 255, 255, 0.6);
             color: var(--forest-deep);
-            border: 1px solid rgba(6, 27, 18, 0.15);
+            border: 1px solid rgba(3, 22, 16, 0.15);
             backdrop-filter: blur(8px);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85);
             transform: translateY(-2px);
         }
 
@@ -154,21 +159,23 @@
             display: inline-flex;
             align-items: center;
             background: linear-gradient(135deg, var(--forest-mid) 0%, var(--forest-deep) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 25px rgba(6, 27, 18, 0.18);
-            padding: 12px 26px; /* Enhanced sizing padding */
-            border-radius: 30px;
-            font-size: 14.5px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 12px 30px rgba(3, 22, 16, 0.2);
+            padding: 14px 28px;
+            border-radius: 35px;
+            font-size: 15px;
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 35px;
-            gap: 12px;
+            gap: 14px;
         }
 
+        /* Fixed the micro sizing on the primary landing tag block element */
         .hero-tagline img {
-            height: 26px; /* Scaled up from 16px to prevent clipping look */
-            width: 26px;
+            height: 34px !important;
+            width: 34px !important;
             object-fit: contain;
+            display: block;
         }
 
         h1 {
@@ -192,7 +199,7 @@
 
         .hero-buttons-container { display: flex; gap: 18px; justify-content: center; align-items: center; }
 
-        .section-wrapper { padding: 100px 0; border-top: 1px solid rgba(6, 27, 18, 0.06); }
+        .section-wrapper { padding: 100px 0; border-top: 1px solid rgba(3, 22, 16, 0.06); }
         .section-title-box { text-align: center; margin-bottom: 60px; }
         .main-title { font-size: 38px; font-weight: 800; color: var(--forest-deep); letter-spacing: -1px; margin-bottom: 16px; }
         .sub-title { color: var(--forest-mid); font-size: 17px; max-width: 640px; margin: 0 auto; font-weight: 500; }
@@ -207,9 +214,9 @@
         }
 
         .glass-showcase-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.3) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 12px 36px rgba(6, 27, 18, 0.03);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.32) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            box-shadow: 0 12px 36px rgba(3, 22, 16, 0.03);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             border-radius: 20px;
@@ -219,9 +226,9 @@
 
         .glass-showcase-card:hover {
             transform: translateY(-5px);
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.45) 100%);
-            box-shadow: 0 20px 45px rgba(6, 27, 18, 0.08);
-            border-color: rgba(255, 255, 255, 0.65);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.5) 100%);
+            box-shadow: 0 20px 45px rgba(3, 22, 16, 0.08);
+            border-color: rgba(255, 255, 255, 0.7);
         }
 
         .card-icon-container {
@@ -241,15 +248,15 @@
         .glass-showcase-card p { color: var(--forest-mid); font-size: 15px; line-height: 1.65; font-weight: 500; }
 
         .notes-preview-box {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.4) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.65);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.42) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.7);
             border-radius: 24px;
             padding: 50px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.02);
             margin-bottom: 40px;
         }
 
-        .notes-header-flex { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(6, 27, 18, 0.08); padding-bottom: 24px; margin-bottom: 32px; }
+        .notes-header-flex { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(3, 22, 16, 0.08); padding-bottom: 24px; margin-bottom: 32px; }
         @media (max-width: 600px) { .notes-header-flex { flex-direction: column; align-items: flex-start; gap: 16px; } }
         .notes-header-flex h3 { font-size: 26px; font-weight: 800; color: var(--forest-deep); }
         .notes-price-tag { background: var(--forest-deep); color: #fff; padding: 8px 18px; border-radius: 30px; font-weight: 700; font-size: 15px; }
@@ -258,9 +265,9 @@
         .admissions-gradient-card {
             max-width: 640px;
             margin: 0 auto;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(228, 244, 236, 0.4) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.65);
-            box-shadow: 0 30px 60px rgba(6, 27, 18, 0.05);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(220, 242, 232, 0.45) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 30px 60px rgba(3, 22, 16, 0.05);
             border-radius: 24px;
             padding: 60px 45px;
             position: relative;
@@ -272,15 +279,15 @@
         .price-large-title span { font-size: 18px; color: var(--sage-deep); font-weight: 600; }
 
         .syllabus-bullets { list-style: none; margin-bottom: 40px; }
-        .syllabus-bullets li { font-size: 15.5px; font-weight: 500; padding: 12px 0; color: var(--forest-deep); display: flex; align-items: center; border-bottom: 1px solid rgba(6, 27, 18, 0.05); }
+        .syllabus-bullets li { font-size: 15.5px; font-weight: 500; padding: 12px 0; color: var(--forest-deep); display: flex; align-items: center; border-bottom: 1px solid rgba(3, 22, 16, 0.05); }
         .syllabus-bullets li::before { content: "✓"; margin-right: 14px; font-size: 16px; font-weight: 800; color: var(--sage-deep); }
 
         .form-input-field {
             width: 100%;
             padding: 16px;
             border-radius: 10px;
-            border: 1px solid rgba(6, 27, 18, 0.12);
-            background: rgba(255, 255, 255, 0.65);
+            border: 1px solid rgba(3, 22, 16, 0.12);
+            background: rgba(255, 255, 255, 0.7);
             color: var(--forest-deep);
             font-family: inherit;
             font-size: 14.5px;
@@ -288,11 +295,11 @@
             transition: all 0.25s ease;
         }
 
-        .form-input-field:focus { outline: none; border-color: var(--sage-deep); background: #ffffff; box-shadow: 0 0 0 4px rgba(22, 68, 50, 0.08); }
+        .form-input-field:focus { outline: none; border-color: var(--sage-deep); background: #ffffff; box-shadow: 0 0 0 4px rgba(18, 60, 45, 0.08); }
 
         select.form-input-field {
             appearance: none;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23061b12'><path d='M7 10l5 5 5-5z'/></svg>");
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23031610'><path d='M7 10l5 5 5-5z'/></svg>");
             background-repeat: no-repeat;
             background-position: right 16px center;
             cursor: pointer;
@@ -308,42 +315,42 @@
             display: flex;
             align-items: center;
             gap: 45px;
-            box-shadow: 0 25px 50px rgba(6, 27, 18, 0.15);
+            box-shadow: 0 25px 50px rgba(3, 22, 16, 0.15);
         }
 
         @media (max-width: 650px) { .mentor-profile-box { flex-direction: column; text-align: center; padding: 40px 24px; } }
         
         .mentor-avatar-icon { 
-            width: 120px; /* Bumped up layout dimension */
-            height: 120px; 
+            width: 130px; 
+            height: 130px; 
             background: #ffffff; 
-            border: 1px solid rgba(255, 255, 255, 0.3); 
+            border: 1px solid rgba(255, 255, 255, 0.35); 
             border-radius: 50%; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
             overflow: hidden; 
             flex-shrink: 0; 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.18); 
         }
 
         .mentor-avatar-icon img {
-            width: 85%; /* Styled beautifully with breathing padding inside the frame */
+            width: 85%;
             height: 85%;
             object-fit: contain;
         }
 
         .mentor-content h4 { font-size: 28px; font-weight: 800; margin-bottom: 6px; color: #ffffff; letter-spacing: -0.5px; }
         .mentor-content .mentor-sub-marker { color: var(--pastel-moss); font-size: 15px; font-weight: 600; margin-bottom: 20px; display: block; text-transform: uppercase; letter-spacing: 0.5px; }
-        .mentor-content p { color: rgba(198, 235, 217, 0.88); font-size: 16px; line-height: 1.75; }
+        .mentor-content p { color: rgba(174, 227, 203, 0.88); font-size: 16px; line-height: 1.75; }
 
         .faq-block { max-width: 750px; margin: 0 auto; }
-        .faq-row { background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.2) 100%); border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 12px; padding: 22px 26px; margin-bottom: 16px; backdrop-filter: blur(8px); }
+        .faq-row { background: linear-gradient(135deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.22) 100%); border: 1px solid rgba(255, 255, 255, 0.38); border-radius: 12px; padding: 22px 26px; margin-bottom: 16px; backdrop-filter: blur(8px); }
         .faq-head { font-size: 16.5px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; color: var(--forest-deep); }
         .faq-head::after { content: "▾"; color: var(--forest-mid); font-size: 18px; }
         .faq-body { color: var(--forest-mid); font-size: 14.5px; margin-top: 12px; line-height: 1.6; font-weight: 500; }
 
-        footer { text-align: center; padding: 60px 0; color: var(--pastel-mint); font-size: 14.5px; border-top: 1px solid rgba(6, 27, 18, 0.1); background: var(--forest-deep); margin-top: 100px; }
+        footer { text-align: center; padding: 60px 0; color: var(--pastel-mint); font-size: 14.5px; border-top: 1px solid rgba(3, 22, 16, 0.1); background: var(--forest-deep); margin-top: 100px; }
     </style>
 </head>
 <body>
