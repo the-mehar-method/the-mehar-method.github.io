@@ -33,10 +33,6 @@
             --pastel-mint: #d4eae0;
             --cream-soft: #f2f7f5;
             
-            /* The requested teeny bit lighter box shade (shifted fully right to blue-green spectrum) */
-            --box-lightened-start: #235d45;
-            --box-lightened-end: #164330;
-            
             --font-display: 'Plus Jakarta Sans', sans-serif;
         }
 
@@ -59,7 +55,7 @@
             width: 320px;
             height: 320px;
             object-fit: contain;
-            mix-blend-mode: multiply; /* Removes all white logo blocks natively */
+            mix-blend-mode: multiply;
         }
         
         .art-heart { top: 12%; right: 6%; }
@@ -114,7 +110,6 @@
             gap: 12px;
         }
 
-        /* Large icon size with blend fix */
         .header-badge img {
             width: 32px !important;
             height: 32px !important;
@@ -176,7 +171,6 @@
             gap: 14px;
         }
 
-        /* Large size with blend mode transparency mapping */
         .hero-tagline img {
             height: 34px !important;
             width: 34px !important;
@@ -220,7 +214,6 @@
             .btn { width: 100%; }
         }
 
-        /* Restored full original gradient mappings for glass containers */
         .glass-showcase-card {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.35) 100%);
             border: 1px solid rgba(255, 255, 255, 0.6);
@@ -255,7 +248,6 @@
         .glass-showcase-card h3 { font-size: 21px; font-weight: 700; color: var(--forest-deep); margin-bottom: 14px; letter-spacing: -0.3px; }
         .glass-showcase-card p { color: var(--forest-mid); font-size: 15px; line-height: 1.65; font-weight: 500; }
 
-        /* Note packs gradient restored */
         .notes-preview-box {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.45) 100%);
             border: 1px solid rgba(255, 255, 255, 0.7);
@@ -271,7 +263,6 @@
         .notes-price-tag { background: var(--forest-deep); color: #fff; padding: 8px 18px; border-radius: 30px; font-weight: 700; font-size: 15px; }
         .notes-features-summary { font-size: 16px; color: var(--forest-mid); line-height: 1.7; font-weight: 500; margin-bottom: 24px; }
 
-        /* Admissions pack card gradient restored */
         .admissions-gradient-card {
             max-width: 640px;
             margin: 0 auto;
@@ -315,48 +306,84 @@
             cursor: pointer;
         }
 
-        /* Beautifully lightened blue-green gradient box layout (no yellow elements!) */
+        /* NEW: Light Rounded Rectangle Mentor Box with Subtle Dot Matrix and Gradient Border/Text Setup */
         .mentor-profile-box {
-            background: linear-gradient(135deg, var(--box-lightened-start) 0%, var(--box-lightened-end) 100%);
-            color: #ffffff;
-            border-radius: 24px;
-            padding: 60px;
             max-width: 880px;
             margin: 0 auto;
+            border-radius: 28px;
+            padding: 5px; /* Creates clean space padding for the gradient border framework */
+            background: linear-gradient(135deg, #4aa883 0%, #164e37 50%, #2b708c 100%); /* The thick gradient frame */
+            box-shadow: 0 25px 55px rgba(9, 30, 22, 0.08);
+        }
+
+        .mentor-inner-card {
+            background-color: rgba(246, 251, 249, 0.94);
+            /* Crisp foggy dot pattern differentiator */
+            background-image: radial-gradient(rgba(51, 115, 87, 0.12) 1.2px, transparent 1.2px);
+            background-size: 14px 14px;
+            border-radius: 24px;
+            padding: 55px;
             display: flex;
             align-items: center;
             gap: 45px;
-            box-shadow: 0 25px 50px rgba(9, 30, 22, 0.15);
+            backdrop-filter: blur(10px);
         }
 
-        @media (max-width: 650px) { .mentor-profile-box { flex-direction: column; text-align: center; padding: 40px 24px; } }
+        @media (max-width: 650px) { 
+            .mentor-inner-card { flex-direction: column; text-align: center; padding: 40px 24px; } 
+        }
         
         .mentor-avatar-icon { 
             width: 130px; 
             height: 130px; 
             background: #ffffff; 
-            border: 1px solid rgba(255, 255, 255, 0.35); 
+            border: 3px solid #acd2be;
             border-radius: 50%; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
             overflow: hidden; 
             flex-shrink: 0; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+            box-shadow: 0 8px 24px rgba(9,30,22,0.06); 
         }
 
         .mentor-avatar-icon img {
             width: 85%;
             height: 85%;
             object-fit: contain;
-            mix-blend-mode: multiply; /* Drops white artifact edge halos dynamically */
+            mix-blend-mode: multiply;
         }
 
-        .mentor-content h4 { font-size: 28px; font-weight: 800; margin-bottom: 6px; color: #ffffff; letter-spacing: -0.5px; }
-        .mentor-content .mentor-sub-marker { color: var(--pastel-mint); font-size: 15px; font-weight: 600; margin-bottom: 20px; display: block; text-transform: uppercase; letter-spacing: 0.5px; }
-        .mentor-content p { color: rgba(255, 255, 255, 0.92); font-size: 16px; line-height: 1.75; }
+        /* Darker Green to Sea Green Text Gradient Configuration */
+        .mentor-content h4 { 
+            font-size: 30px; 
+            font-weight: 800; 
+            margin-bottom: 6px; 
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #091e16 0%, #165c40 60%, #1e7561 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-        /* FAQs gradient restored */
+        .mentor-content .mentor-sub-marker { 
+            color: #246e53; 
+            font-size: 15px; 
+            font-weight: 700; 
+            margin-bottom: 20px; 
+            display: block; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px; 
+        }
+
+        .mentor-content p { 
+            font-size: 16.5px; 
+            line-height: 1.75;
+            font-weight: 500;
+            background: linear-gradient(135deg, #0f2b20 0%, #1a4d37 70%, #226956 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         .faq-block { max-width: 750px; margin: 0 auto; }
         .faq-row { background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.25) 100%); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 12px; padding: 22px 26px; margin-bottom: 16px; backdrop-filter: blur(8px); }
         .faq-head { font-size: 16.5px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; color: var(--forest-deep); }
@@ -481,15 +508,17 @@
 
         <section class="section-wrapper">
             <div class="mentor-profile-box">
-                <div class="mentor-avatar-icon">
-                    <img src="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579" alt="Mentor Profile Logo">
-                </div>
-                <div class="mentor-content">
-                    <h4>Meet Your Mentor</h4>
-                    <span class="mentor-sub-marker">Architect of The Mehar Method</span>
-                    <p>
-                        Hi, I'm Mehar. Having achieved an A* in IGCSE Biology, I founded this platform to change how we interact with science. As a high school student aspiring to become a biology Olympian, my mission is to spread deep conceptual knowledge to peers. The Mehar Method eliminates dense, passive text in favor of vibrant, highly integrated visual frameworks that make academic breakthroughs natural.
-                    </p>
+                <div class="mentor-inner-card">
+                    <div class="mentor-avatar-icon">
+                        <img src="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579" alt="Mentor Profile Logo">
+                    </div>
+                    <div class="mentor-content">
+                        <h4>Meet Your Mentor</h4>
+                        <span class="mentor-sub-marker">Architect of The Mehar Method</span>
+                        <p>
+                            Hi, I'm Mehar. Having achieved an A* in IGCSE Biology, I founded this platform to change how we interact with science. As a high school student aspiring to become a biology Olympian, my mission is to spread deep conceptual knowledge to peers. The Mehar Method eliminates dense, passive text in favor of vibrant, highly integrated visual frameworks that make academic breakthroughs natural.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
