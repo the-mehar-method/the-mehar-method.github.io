@@ -306,45 +306,42 @@
             cursor: pointer;
         }
 
-        /* NEW: Light Rounded Rectangle Mentor Box with Subtle Dot Matrix and Gradient Border/Text Setup */
+        /* CHANGED: IGCSE Ecosystem Badge Box Style Configuration for Meet Your Mentor */
         .mentor-profile-box {
             max-width: 880px;
             margin: 0 auto;
-            border-radius: 28px;
-            padding: 5px; /* Creates clean space padding for the gradient border framework */
-            background: linear-gradient(135deg, #4aa883 0%, #164e37 50%, #2b708c 100%); /* The thick gradient frame */
-            box-shadow: 0 25px 55px rgba(9, 30, 22, 0.08);
-        }
-
-        .mentor-inner-card {
-            background-color: rgba(246, 251, 249, 0.94);
-            /* Crisp foggy dot pattern differentiator */
-            background-image: radial-gradient(rgba(51, 115, 87, 0.12) 1.2px, transparent 1.2px);
+            border-radius: 30px;
+            /* Same light background as header badge with clear differentiation pattern */
+            background-color: rgba(212, 234, 224, 0.5);
+            background-image: radial-gradient(rgba(9, 30, 22, 0.12) 1.5px, transparent 1.5px);
             background-size: 14px 14px;
-            border-radius: 24px;
+            /* Clean reasonably thick outline matching header badge ecosystem borders */
+            border: 2px solid rgba(9, 30, 22, 0.15);
             padding: 55px;
             display: flex;
             align-items: center;
             gap: 45px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 15px 40px rgba(9, 30, 22, 0.04);
         }
 
         @media (max-width: 650px) { 
-            .mentor-inner-card { flex-direction: column; text-align: center; padding: 40px 24px; } 
+            .mentor-profile-box { flex-direction: column; text-align: center; padding: 40px 24px; } 
         }
         
         .mentor-avatar-icon { 
             width: 130px; 
             height: 130px; 
             background: #ffffff; 
-            border: 3px solid #acd2be;
+            border: 1px solid rgba(9, 30, 22, 0.12);
             border-radius: 50%; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
             overflow: hidden; 
             flex-shrink: 0; 
-            box-shadow: 0 8px 24px rgba(9,30,22,0.06); 
+            box-shadow: 0 6px 20px rgba(9,30,22,0.04); 
         }
 
         .mentor-avatar-icon img {
@@ -354,20 +351,18 @@
             mix-blend-mode: multiply;
         }
 
-        /* Darker Green to Sea Green Text Gradient Configuration */
+        /* Solid Crisp Colors for Text Elements to Match Ecosystem Badge Styling Explicitly */
         .mentor-content h4 { 
-            font-size: 30px; 
+            font-size: 28px; 
             font-weight: 800; 
             margin-bottom: 6px; 
             letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #091e16 0%, #165c40 60%, #1e7561 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--forest-deep);
         }
 
         .mentor-content .mentor-sub-marker { 
-            color: #246e53; 
-            font-size: 15px; 
+            color: var(--sage-deep); 
+            font-size: 14.5px; 
             font-weight: 700; 
             margin-bottom: 20px; 
             display: block; 
@@ -376,12 +371,10 @@
         }
 
         .mentor-content p { 
-            font-size: 16.5px; 
-            line-height: 1.75;
+            font-size: 16px; 
+            line-height: 1.7;
             font-weight: 500;
-            background: linear-gradient(135deg, #0f2b20 0%, #1a4d37 70%, #226956 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--forest-mid);
         }
 
         .faq-block { max-width: 750px; margin: 0 auto; }
@@ -480,9 +473,9 @@
                     
                     <ul class="syllabus-bullets">
                         <li>4 Weekly Live Accelerated Whiteboard Masterclasses</li>
-                        <li>Restricted Access Google Docs Reference Study Packs</li>
+                        <li>Gain Full Access to the Complete Suite of Premium Visual IGCSE Biology Notes</li>
                         <li>Direct Direct-Access WhatsApp Messenger Channel with Mehar</li>
-                        <li>Topic Evaluation Folders Mapped to Examiner Keyword Strings</li>
+                        <li>Notes Built Intentionally Around Core Marking Schemes to Ensure You Hit Every Single Keyword</li>
                     </ul>
 
                     <form action="https://formbold.com/s/oYAkq" method="POST">
@@ -508,17 +501,15 @@
 
         <section class="section-wrapper">
             <div class="mentor-profile-box">
-                <div class="mentor-inner-card">
-                    <div class="mentor-avatar-icon">
-                        <img src="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579" alt="Mentor Profile Logo">
-                    </div>
-                    <div class="mentor-content">
-                        <h4>Meet Your Mentor</h4>
-                        <span class="mentor-sub-marker">Architect of The Mehar Method</span>
-                        <p>
-                            Hi, I'm Mehar. Having achieved an A* in IGCSE Biology, I founded this platform to change how we interact with science. As a high school student aspiring to become a biology Olympian, my mission is to spread deep conceptual knowledge to peers. The Mehar Method eliminates dense, passive text in favor of vibrant, highly integrated visual frameworks that make academic breakthroughs natural.
-                        </p>
-                    </div>
+                <div class="mentor-avatar-icon">
+                    <img src="https://media.discordapp.net/attachments/1509608288264782026/1515386232560025731/Untitled_design_1.png?ex=6a2ed0e8&is=6a2d7f68&hm=51d3b1cea3cce08dd4211a938b5dd2c94b7076520f989dc1e3f330587e39aea1&=&format=webp&quality=lossless&width=579&height=579" alt="Mentor Profile Logo">
+                </div>
+                <div class="mentor-content">
+                    <h4>Meet Your Mentor</h4>
+                    <span class="mentor-sub-marker">Architect of The Mehar Method</span>
+                    <p>
+                        Hi, I'm Mehar. Having achieved an A* in IGCSE Biology, I founded this platform to change how we interact with science. As a high school student aspiring to become a biology Olympian, my mission is to spread deep conceptual knowledge to peers. The Mehar Method eliminates dense, passive text in favor of vibrant, highly integrated visual frameworks that make academic breakthroughs natural.
+                    </p>
                 </div>
             </div>
         </section>
