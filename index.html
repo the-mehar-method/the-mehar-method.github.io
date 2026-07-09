@@ -29,13 +29,42 @@
       --max-width: 1140px;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: radial-gradient(circle at 10% 20%, #f2f7f5 0%, #dae9e2 45%, #b1cfc0 100%);
       background-attachment: fixed;
       font-family: var(--font);
       color: var(--forest-deep);
       line-height: 1.5;
-      padding-bottom: 2rem;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* background ornaments - now scroll with page */
+    .bg-ornament {
+      position: absolute;
+      opacity: 0.07;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+      z-index: 0;
+    }
+    .bg-ornament--1 { 
+      top: 8%; 
+      right: 3%; 
+      width: 280px; 
+    }
+    .bg-ornament--2 { 
+      top: 45%; 
+      left: 2%; 
+      width: 200px; 
+    }
+    .bg-ornament--3 { 
+      top: 78%; 
+      right: 3%; 
+      width: 260px; 
     }
 
     .container {
@@ -46,22 +75,9 @@
       z-index: 2;
     }
 
-    /* background ornaments */
-    .bg-ornament {
-      position: fixed;
-      opacity: 0.07;
-      pointer-events: none;
-      width: 240px;
-      z-index: 0;
-      mix-blend-mode: multiply;
-    }
-    .bg-ornament--1 { top: 6%; right: 2%; width: 280px; }
-    .bg-ornament--2 { top: 40%; left: 1%; width: 200px; }
-    .bg-ornament--3 { bottom: 8%; right: 2%; width: 260px; }
-
     /* header */
     .header {
-      background: rgba(212, 234, 224, 0.5);
+      background: rgba(212, 234, 224, 0.6);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
       border-bottom: 1px solid rgba(9, 30, 22, 0.06);
@@ -475,12 +491,15 @@
       .hero h1 { font-size: 2.2rem; }
       .admission-card { padding: 2rem 1.2rem; }
       .notes-preview { padding: 1.5rem; }
+      .bg-ornament--1 { width: 160px; }
+      .bg-ornament--2 { width: 120px; }
+      .bg-ornament--3 { width: 150px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- background ornaments -->
+  <!-- background ornaments - now positioned absolutely and scroll with page -->
   <img class="bg-ornament bg-ornament--1" src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="">
   <img class="bg-ornament bg-ornament--2" src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="">
   <img class="bg-ornament bg-ornament--3" src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="">
