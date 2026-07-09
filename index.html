@@ -1,572 +1,628 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Mehar Method | Elite Visual IGCSE Biology Tutoring</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Mehar Method · visual IGCSE Biology</title>
+  <meta name="description" content="Master IGCSE Biology visually with The Mehar Method. Visual note packs, custom tutoring, keyword-perfect mapping.">
+  <link rel="icon" type="image/png" href="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <meta name="description" content="Master IGCSE Biology visually with The Mehar Method. High-quality visual note packs, custom tutoring strategies, and keyword-perfect mapping built around core marking schemes.">
-    <meta name="keywords" content="The Mehar Method, IGCSE Biology, Biology Tutoring, Visual Biology Notes, IGCSE Biology Notes, Mehar Biology, High School Biology Prep">
-    <meta name="author" content="The Mehar Method">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="The Mehar Method | Elite Visual IGCSE Biology Tutoring">
-    <meta property="og:description" content="Stop memorizing textbooks. Master Biology concepts visually through highly integrated system maps built around examiner marking schemes.">
-    <meta property="og:image" content="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp">
-    <meta property="og:type" content="website">
+    :root {
+      --forest-deep: #091e16;
+      --forest-mid: #123326;
+      --sage-deep: #1d4e3a;
+      --sage-medium: #337357;
+      --sage-light: #6aa88a;
+      --pastel-moss: #acd2be;
+      --pastel-mint: #d4eae0;
+      --cream-soft: #f2f7f5;
+      --font: 'Plus Jakarta Sans', sans-serif;
+      --max-width: 1140px;
+    }
 
-    <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp">
-    <link rel="icon" type="image/png" sizes="48x48" href="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp">
-    <link rel="icon" type="image/png" sizes="96x96" href="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp">
-    <link rel="apple-touch-icon" href="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp">
+    body {
+      background: radial-gradient(circle at 10% 20%, #f2f7f5 0%, #dae9e2 45%, #b1cfc0 100%);
+      background-attachment: fixed;
+      font-family: var(--font);
+      color: var(--forest-deep);
+      line-height: 1.5;
+      padding-bottom: 2rem;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        /* CSS Reset & Variables */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
 
-        :root {
-            --forest-deep: #091e16;
-            --forest-mid: #123326;
-            --sage-deep: #1d4e3a;
-            --sage-medium: #337357;
-            --sage-light: #6aa88a;
-            --pastel-moss: #acd2be;
-            --pastel-mint: #d4eae0;
-            --cream-soft: #f2f7f5;
-            
-            --font-display: 'Plus Jakarta Sans', sans-serif;
-        }
+    /* background ornaments */
+    .bg-ornament {
+      position: fixed;
+      opacity: 0.07;
+      pointer-events: none;
+      width: 240px;
+      z-index: 0;
+      mix-blend-mode: multiply;
+    }
+    .bg-ornament--1 { top: 6%; right: 2%; width: 280px; }
+    .bg-ornament--2 { top: 40%; left: 1%; width: 200px; }
+    .bg-ornament--3 { bottom: 8%; right: 2%; width: 260px; }
 
-        body {
-            background: radial-gradient(circle at 10% 20%, #f2f7f5 0%, #dae9e2 45%, #b1cfc0 100%);
-            background-attachment: fixed;
-            color: var(--forest-deep);
-            font-family: var(--font-display);
-            line-height: 1.6;
-            padding-bottom: 60px;
-            position: relative;
-        }
+    /* header */
+    .header {
+      background: rgba(212, 234, 224, 0.5);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(9, 30, 22, 0.06);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0.5rem 0;
+    }
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      min-height: 72px;
+    }
+    .brand {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .brand span { color: var(--sage-deep); }
+    .header-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(9, 30, 22, 0.04);
+      border: 1px solid rgba(9, 30, 22, 0.08);
+      padding: 0.4rem 1.2rem 0.4rem 0.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .header-badge img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
 
-        .bg-artwork {
-            position: absolute;
-            opacity: 0.08;
-            pointer-events: none;
-            z-index: 0;
-            width: 320px;
-            height: 320px;
-            object-fit: contain;
-            mix-blend-mode: multiply;
-        }
-        
-        .art-heart { top: 12%; right: 6%; }
-        .art-brain { top: 42%; left: 3%; }
-        .art-dna { top: 72%; right: 4%; }
+    /* buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: 0.25s ease;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+    .btn--primary {
+      background: linear-gradient(135deg, var(--forest-mid), var(--forest-deep));
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(9, 30, 22, 0.2);
+    }
+    .btn--primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(9, 30, 22, 0.3);
+    }
+    .btn--secondary {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(9, 30, 22, 0.12);
+      color: var(--forest-deep);
+    }
+    .btn--secondary:hover {
+      background: rgba(255, 255, 255, 0.85);
+      transform: translateY(-3px);
+    }
+    .btn--full { width: 100%; }
 
-        .container {
-            width: 100%;
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 24px;
-            position: relative;
-            z-index: 10;
-        }
+    /* hero */
+    .hero {
+      padding: 4rem 0 3rem;
+      text-align: center;
+    }
+    .hero__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: var(--forest-deep);
+      padding: 0.6rem 1.8rem 0.6rem 1.2rem;
+      border-radius: 40px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 24px rgba(9, 30, 22, 0.2);
+    }
+    .hero__tag img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      max-width: 820px;
+      margin: 0 auto 1.2rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: 0 auto 2.4rem;
+      color: var(--forest-mid);
+      font-weight: 500;
+    }
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
 
-        header {
-            background-color: rgba(212, 234, 224, 0.45);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(9, 30, 22, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    /* sections */
+    .section {
+      padding: 4.5rem 0;
+      border-top: 1px solid rgba(9, 30, 22, 0.05);
+    }
+    .section__title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section__title h2 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.4rem;
+    }
+    .section__title p {
+      color: var(--forest-mid);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
 
-        .header-wrap {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 90px;
-        }
+    /* cards */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    @media (max-width: 720px) { .grid-3 { grid-template-columns: 1fr; } }
 
-        .brand-logo {
-            font-size: 26px;
-            font-weight: 800;
-            letter-spacing: -1px;
-            color: var(--forest-deep);
-        }
+    .card-glass {
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 24px;
+      padding: 2rem 1.8rem;
+      transition: 0.3s ease;
+      box-shadow: 0 6px 20px rgba(9, 30, 22, 0.02);
+    }
+    .card-glass:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.75);
+      border-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 16px 40px rgba(9, 30, 22, 0.06);
+    }
+    .card__icon {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--pastel-moss), var(--sage-light));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.4rem;
+    }
+    .card__icon svg {
+      width: 26px;
+      height: 26px;
+      fill: var(--forest-deep);
+    }
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .card p {
+      color: var(--forest-mid);
+      font-weight: 500;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
 
-        .brand-logo span { color: var(--sage-deep); font-weight: 800; }
+    /* notes preview */
+    .notes-preview {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 28px;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .notes-preview__header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(9, 30, 22, 0.06);
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .notes-preview__header h3 {
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+    .notes-price {
+      background: var(--forest-deep);
+      color: #fff;
+      padding: 0.3rem 1.4rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .notes-preview p {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--forest-mid);
+    }
 
-        .header-badge {
-            background: rgba(9, 30, 22, 0.05);
-            border: 1px solid rgba(9, 30, 22, 0.12);
-            color: var(--forest-deep);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+    /* admission card */
+    .admission-card {
+      max-width: 660px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 32px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 24px 50px rgba(9, 30, 22, 0.04);
+    }
+    .price-block {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .price-block .price {
+      font-size: 3.4rem;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+    }
+    .price-block .price span {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--sage-deep);
+    }
+    .price-block .sub {
+      color: var(--sage-deep);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 0.2rem;
+    }
+    .syllabus {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    .syllabus li {
+      padding: 0.7rem 0;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(9, 30, 22, 0.04);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .syllabus li::before {
+      content: "✓";
+      color: var(--sage-deep);
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      border: 1px solid rgba(9, 30, 22, 0.1);
+      background: rgba(255, 255, 255, 0.6);
+      font-family: inherit;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      transition: 0.2s;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: var(--sage-deep);
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(29, 78, 58, 0.08);
+    }
+    select.form-input {
+      appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23091e16'><path d='M7 10l5 5 5-5z'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      cursor: pointer;
+    }
 
-        .header-badge img {
-            width: 32px !important;
-            height: 32px !important;
-            object-fit: contain;
-            display: block;
-            mix-blend-mode: multiply;
-        }
+    /* mentor */
+    .mentor-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3px;
+      background: linear-gradient(135deg, rgba(9, 30, 22, 0.2), rgba(9, 30, 22, 0.05), rgba(29, 78, 58, 0.25));
+      border-radius: 40px;
+    }
+    .mentor-card {
+      background: rgba(212, 234, 224, 0.5);
+      backdrop-filter: blur(16px);
+      border-radius: 38px;
+      padding: 2.8rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 2.8rem;
+    }
+    @media (max-width: 680px) {
+      .mentor-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+    }
+    .mentor-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid rgba(9, 30, 22, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 6px 18px rgba(9, 30, 22, 0.04);
+    }
+    .mentor-avatar img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+    }
+    .mentor-info h4 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .mentor-info .badge {
+      color: var(--sage-deep);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .mentor-info p {
+      color: var(--forest-mid);
+      font-weight: 500;
+      line-height: 1.7;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 15px 34px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 14.5px;
-            text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            cursor: pointer;
-            text-align: center;
-            border: none;
-        }
+    /* faq */
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 16px;
+      padding: 1.2rem 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+    .faq-item__q {
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      cursor: default;
+    }
+    .faq-item__q::after {
+      content: "▾";
+      color: var(--forest-mid);
+      font-size: 1.2rem;
+    }
+    .faq-item__a {
+      color: var(--forest-mid);
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-top: 0.6rem;
+      line-height: 1.6;
+    }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--forest-mid) 0%, var(--forest-deep) 100%);
-            color: #ffffff;
-            box-shadow: 0 4px 18px rgba(9, 30, 22, 0.2);
-        }
+    /* footer */
+    .footer {
+      text-align: center;
+      padding: 3rem 0;
+      margin-top: 3rem;
+      border-top: 1px solid rgba(9, 30, 22, 0.06);
+      color: var(--forest-deep);
+      font-weight: 500;
+      font-size: 0.9rem;
+      background: var(--forest-deep);
+      color: var(--pastel-mint);
+    }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(9, 30, 22, 0.35);
-        }
-
-        .btn-secondary {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
-            color: var(--forest-deep);
-            border: 1px solid rgba(9, 30, 22, 0.15);
-            backdrop-filter: blur(8px);
-        }
-
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
-            transform: translateY(-2px);
-        }
-
-        .hero-block { padding: 90px 0 70px 0; text-align: center; }
-
-        .hero-tagline {
-            display: inline-flex;
-            align-items: center;
-            background: linear-gradient(135deg, var(--forest-mid) 0%, var(--forest-deep) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 12px 30px rgba(9, 30, 22, 0.2);
-            padding: 14px 28px;
-            border-radius: 35px;
-            font-size: 15px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 35px;
-            gap: 14px;
-        }
-
-        .hero-tagline img {
-            height: 34px !important;
-            width: 34px !important;
-            object-fit: contain;
-            display: block;
-            mix-blend-mode: multiply; 
-        }
-
-        h1 {
-            font-size: 58px;
-            font-weight: 800;
-            letter-spacing: -2px;
-            line-height: 1.15;
-            color: var(--forest-deep);
-            max-width: 900px;
-            margin: 0 auto 26px auto;
-        }
-
-        .hero-subtext {
-            font-size: 19.5px;
-            color: var(--forest-mid);
-            max-width: 780px;
-            margin: 0 auto 48px auto;
-            font-weight: 500;
-            line-height: 1.65;
-        }
-
-        .hero-buttons-container { display: flex; gap: 18px; justify-content: center; align-items: center; }
-
-        .section-wrapper { padding: 100px 0; border-top: 1px solid rgba(9, 30, 22, 0.06); }
-        .section-title-box { text-align: center; margin-bottom: 60px; }
-        .main-title { font-size: 38px; font-weight: 800; color: var(--forest-deep); letter-spacing: -1px; margin-bottom: 16px; }
-        .sub-title { color: var(--forest-mid); font-size: 17px; max-width: 640px; margin: 0 auto; font-weight: 500; }
-
-        .cards-layout-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-
-        @media (max-width: 768px) {
-            .cards-layout-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 38px; }
-            .hero-buttons-container { flex-direction: column; }
-            .btn { width: 100%; }
-        }
-
-        .glass-showcase-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.35) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 12px 36px rgba(9, 30, 22, 0.03);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border-radius: 20px;
-            padding: 40px;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .glass-showcase-card:hover {
-            transform: translateY(-5px);
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 100%);
-            box-shadow: 0 20px 45px rgba(9, 30, 22, 0.08);
-            border-color: rgba(255, 255, 255, 0.7);
-        }
-
-        .card-icon-container {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--pastel-moss) 0%, var(--sage-light) 100%);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 26px;
-            box-shadow: inset 0 2px 4px rgba(255,255,255,0.3);
-        }
-
-        .card-icon-container svg { width: 26px; height: 26px; fill: var(--forest-deep); }
-        .glass-showcase-card h3 { font-size: 21px; font-weight: 700; color: var(--forest-deep); margin-bottom: 14px; letter-spacing: -0.3px; }
-        .glass-showcase-card p { color: var(--forest-mid); font-size: 15px; line-height: 1.65; font-weight: 500; }
-
-        .notes-preview-box {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.45) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            border-radius: 24px;
-            padding: 50px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.02);
-            margin-bottom: 40px;
-        }
-
-        .notes-header-flex { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(9, 30, 22, 0.08); padding-bottom: 24px; margin-bottom: 32px; }
-        @media (max-width: 600px) { .notes-header-flex { flex-direction: column; align-items: flex-start; gap: 16px; } }
-        .notes-header-flex h3 { font-size: 26px; font-weight: 800; color: var(--forest-deep); }
-        .notes-price-tag { background: var(--forest-deep); color: #fff; padding: 8px 18px; border-radius: 30px; font-weight: 700; font-size: 15px; }
-        .notes-features-summary { font-size: 16px; color: var(--forest-mid); line-height: 1.7; font-weight: 500; margin-bottom: 24px; }
-
-        .admissions-gradient-card {
-            max-width: 640px;
-            margin: 0 auto;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(220, 238, 229, 0.5) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            box-shadow: 0 30px 60px rgba(9, 30, 22, 0.05);
-            border-radius: 24px;
-            padding: 60px 45px;
-            position: relative;
-            backdrop-filter: blur(16px);
-        }
-
-        .price-display-box { text-align: center; margin-bottom: 40px; }
-        .price-large-title { font-size: 58px; font-weight: 900; color: var(--forest-deep); letter-spacing: -2px; }
-        .price-large-title span { font-size: 18px; color: var(--sage-deep); font-weight: 600; }
-
-        .syllabus-bullets { list-style: none; margin-bottom: 40px; }
-        .syllabus-bullets li { font-size: 15.5px; font-weight: 500; padding: 12px 0; color: var(--forest-deep); display: flex; align-items: center; border-bottom: 1px solid rgba(9, 30, 22, 0.05); }
-        .syllabus-bullets li::before { content: "✓"; margin-right: 14px; font-size: 16px; font-weight: 800; color: var(--sage-deep); }
-
-        .form-input-field {
-            width: 100%;
-            padding: 16px;
-            border-radius: 10px;
-            border: 1px solid rgba(9, 30, 22, 0.12);
-            background: rgba(255, 255, 255, 0.7);
-            color: var(--forest-deep);
-            font-family: inherit;
-            font-size: 14.5px;
-            margin-bottom: 18px;
-            transition: all 0.25s ease;
-        }
-
-        .form-input-field:focus { outline: none; border-color: var(--sage-deep); background: #ffffff; box-shadow: 0 0 0 4px rgba(29, 78, 58, 0.08); }
-
-        select.form-input-field {
-            appearance: none;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23091e16'><path d='M7 10l5 5 5-5z'/></svg>");
-            background-repeat: no-repeat;
-            background-position: right 16px center;
-            cursor: pointer;
-        }
-
-        /* Ecosystem Gradient Border Container Setup */
-        .mentor-profile-box {
-            max-width: 880px;
-            margin: 0 auto;
-            border-radius: 30px;
-            padding: 3px; 
-            background: linear-gradient(135deg, rgba(9, 30, 22, 0.35) 0%, rgba(9, 30, 22, 0.12) 50%, rgba(29, 78, 58, 0.4) 100%);
-            box-shadow: 0 15px 40px rgba(9, 30, 22, 0.04);
-        }
-
-        .mentor-inner-card {
-            background-color: rgba(212, 234, 224, 0.65);
-            border-radius: 27px;
-            padding: 55px;
-            display: flex;
-            align-items: center;
-            gap: 45px;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-
-        @media (max-width: 650px) { 
-            .mentor-inner-card { flex-direction: column; text-align: center; padding: 40px 24px; } 
-        }
-        
-        .mentor-avatar-icon { 
-            width: 130px; 
-            height: 130px; 
-            background: #ffffff; 
-            border: 1px solid rgba(9, 30, 22, 0.12);
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            overflow: hidden; 
-            flex-shrink: 0; 
-            box-shadow: 0 6px 20px rgba(9,30,22,0.04); 
-        }
-
-        .mentor-avatar-icon img {
-            width: 85%;
-            height: 85%;
-            object-fit: contain;
-            mix-blend-mode: multiply;
-        }
-
-        .mentor-content h4 { 
-            font-size: 28px; 
-            font-weight: 800; 
-            margin-bottom: 6px; 
-            letter-spacing: -0.5px;
-            color: var(--forest-deep);
-        }
-
-        .mentor-content .mentor-sub-marker { 
-            color: var(--sage-deep); 
-            font-size: 14.5px; 
-            font-weight: 700; 
-            margin-bottom: 20px; 
-            display: block; 
-            text-transform: uppercase; 
-            letter-spacing: 0.5px; 
-        }
-
-        .mentor-content p { 
-            font-size: 16px; 
-            line-height: 1.7;
-            font-weight: 500;
-            color: var(--forest-mid);
-        }
-
-        .faq-block { max-width: 750px; margin: 0 auto; }
-        .faq-row { background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.25) 100%); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 12px; padding: 22px 26px; margin-bottom: 16px; backdrop-filter: blur(8px); }
-        .faq-head { font-size: 16.5px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; color: var(--forest-deep); }
-        .faq-head::after { content: "▾"; color: var(--forest-mid); font-size: 18px; }
-        .faq-body { color: var(--forest-mid); font-size: 14.5px; margin-top: 12px; line-height: 1.6; font-weight: 500; }
-
-        footer { text-align: center; padding: 60px 0; color: var(--pastel-mint); font-size: 14.5px; border-top: 1px solid rgba(9, 30, 22, 0.1); background: var(--forest-deep); margin-top: 100px; }
-    </style>
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2.2rem; }
+      .admission-card { padding: 2rem 1.2rem; }
+      .notes-preview { padding: 1.5rem; }
+    }
+  </style>
 </head>
 <body>
 
-    <img class="bg-artwork art-heart" src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="Background Logo Vector">
-    <img class="bg-artwork art-brain" src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="Background Logo Vector">
-    <img class="bg-artwork art-dna" src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="Background Logo Vector">
+  <!-- background ornaments -->
+  <img class="bg-ornament bg-ornament--1" src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="">
+  <img class="bg-ornament bg-ornament--2" src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="">
+  <img class="bg-ornament bg-ornament--3" src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="">
 
-    <header>
-        <div class="container header-wrap">
-            <div class="brand-logo">The Mehar <span>Method</span></div>
-            <div class="header-badge">
-                <img src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="Logo">
-                IGCSE Ecosystem
-            </div>
+  <!-- header -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">The Mehar <span>Method</span></div>
+      <div class="header-badge">
+        <img src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="logo"> IGCSE Ecosystem
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- hero -->
+    <section class="hero">
+      <div class="hero__tag">
+        <img src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt=""> 10 Slots Maximum · Commencing 15th July
+      </div>
+      <h1>Stop Memorizing Textbooks.<br>Master Biology Visually.</h1>
+      <p>Welcome to a learning environment tailored for any student. Whether you find content overwhelming or aim to become a biology Olympian, my explanations and custom strategies turn complex biology into clear visual clarity.</p>
+      <div class="hero__actions">
+        <a href="#register" class="btn btn--primary">Claim Your Free Masterclass Seat</a>
+        <a href="#notes-hub" class="btn btn--secondary">Explore Sample Notes</a>
+      </div>
+    </section>
+
+    <!-- notes hub -->
+    <section class="section" id="notes-hub">
+      <div class="section__title">
+        <h2>The Graphic Advantage</h2>
+        <p>Bridging syllabus requirements with spatial memory vectors, built around keyword accuracy.</p>
+      </div>
+
+      <div class="notes-preview">
+        <div class="notes-preview__header">
+          <h3>The Master Visual Note Packs</h3>
+          <span class="notes-price">$10 / Complete Set</span>
         </div>
-    </header>
+        <p>Completely in-depth yet highly concise, these note packets cut through textbook noise. Every illustration, metabolic flowchart, and cellular system map is calibrated seamlessly with marking criteria so you retain exactly what counts.</p>
+      </div>
 
-    <main class="container">
-        
-        <section class="hero-block">
-            <div class="hero-tagline">
-                <img src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="Logo">
-                10 Slots Maximum Limit • Commencing 15th July
-            </div>
-            <h1>Stop Memorizing Textbooks.<br>Master Biology Visually.</h1>
-            <p class="hero-subtext">Welcome to a learning environment tailored for any student of any calibre. Whether you are finding the content overwhelming or aiming to become a biology Olympian, my explanations and custom tutoring strategies are engineered to make you completely master the subject, turning complex biology into clear visual clarity.</p>
-            <div class="hero-buttons-container">
-                <a href="#register" class="btn btn-primary">Claim Your Free Masterclass Seat</a>
-                <a href="#notes-hub" class="btn btn-secondary">Explore Sample Notes</a>
-            </div>
-        </section>
-
-        <section class="section-wrapper" id="notes-hub">
-            <div class="section-title-box">
-                <h2 class="main-title">The Graphic Advantage</h2>
-                <p class="sub-title">Bridging the gap between rigid syllabus requirements and spatial memory vectors, built intentionally around keyword accuracy.</p>
-            </div>
-            
-            <div class="notes-preview-box">
-                <div class="notes-header-flex">
-                    <h3>The Master Visual Note Packs</h3>
-                    <div class="notes-price-tag">$10 / Complete Set</div>
-                </div>
-                <p class="notes-features-summary">
-                    Completely in-depth yet highly concise, these note packets cut directly through textbook noise. Every illustration, metabolic flowchart, and cellular system map is calibrated seamlessly with marking criteria so you retain exactly what counts.
-                </p>
-            </div>
-
-            <div class="cards-layout-grid">
-                <div class="glass-showcase-card">
-                    <div class="card-icon-container">
-                        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-                    </div>
-                    <h3>In-Depth Yet Concise</h3>
-                    <p>Entire textbook sub-units are neatly structured down into modular tracking summaries that leave zero core biological concepts omitted.</p>
-                </div>
-                <div class="glass-showcase-card">
-                    <div class="card-icon-container">
-                        <svg viewBox="0 0 24 24"><path d="M12 21.35L10.55,20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.41 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.59 3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.04L12,21.35Z"/></svg>
-                    </div>
-                    <h3>Anatomical Precision</h3>
-                    <p>Clean vector lines outlining physiological loops (Vascular channels, Reflex coordinates, Gene pairs) for effortless spatial retention.</p>
-                </div>
-                <div class="glass-showcase-card">
-                    <div class="card-icon-container">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
-                    </div>
-                    <h3>Marking Scheme Match</h3>
-                    <p>Every single map element traces standard examiner marking trends directly, showing you the vital keywords to target on paper.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-wrapper" id="register">
-            <div class="section-title-box">
-                <h2 class="main-title">Join the Ecosystem</h2>
-                <p class="sub-title">Secure custom resources or apply for direct accelerated interactive batches below.</p>
-            </div>
-            
-            <div class="admissions-gradient-card">
-                <div id="main-form-view">
-                    <div class="price-display-box">
-                        <div class="price-large-title">$10 <span>/ Resource Unit Base</span></div>
-                        <p style="color: var(--sage-deep); font-weight: 600; margin-top: 6px; font-size: 14.5px;">Tutoring Track: $10/Hr &bull; Complete Visual Notes: $10</p>
-                    </div>
-                    
-                    <ul class="syllabus-bullets">
-                        <li>4 Weekly Live Accelerated Whiteboard Masterclasses</li>
-                        <li>Gain Full Access to the Complete Suite of Premium Visual IGCSE Biology Notes</li>
-                        <li>Direct Direct-Access WhatsApp Messenger Channel with Mehar</li>
-                        <li>Notes Built Intentionally Around Core Marking Schemes to Ensure You Hit Every Single Keyword</li>
-                    </ul>
-
-                    <form action="https://formbold.com/s/oYAkq" method="POST">
-                        <div>
-                            <input type="text" name="name" class="form-input-field" placeholder="Student Full Name" required>
-                        </div>
-                        <div>
-                            <input type="email" name="email" class="form-input-field" placeholder="Parent/Student Email Address" required>
-                        </div>
-                        <div>
-                            <select name="registration_type" class="form-input-field" required>
-                                <option value="" disabled selected>Select what you are registering for:</option>
-                                <option value="Live Interactive Lessons">Live Accelerated Interactive Lessons ($10/Hour)</option>
-                                <option value="Complete Visual Note Packs">Complete Visual Note Packs ($10 One-time)</option>
-                                <option value="Both Lessons and Notes">Full Track Bundle: Both Lessons & Notes</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; border: none; font-size: 15px; margin-top: 8px;">Submit Application</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-wrapper">
-            <div class="mentor-profile-box">
-                <div class="mentor-inner-card">
-                    <div class="mentor-avatar-icon">
-                        <img src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="Mentor Profile Logo">
-                    </div>
-                    <div class="mentor-content">
-                        <h4>Meet Your Mentor</h4>
-                        <span class="mentor-sub-marker">Architect of The Mehar Method</span>
-                        <p>
-                            Hi, I'm Mehar. Having achieved an A* in IGCSE Biology, I founded this platform to change how we interact with science. As a high school student aspiring to become a biology Olympian, my mission is to spread deep conceptual knowledge to peers. The Mehar Method eliminates dense, passive text in favor of vibrant, highly integrated visual frameworks that make academic breakthroughs natural.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-wrapper">
-            <div class="section-title-box">
-                <h2 class="main-title">Frequently Asked Questions</h2>
-            </div>
-            <div class="faq-block">
-                <div class="faq-row">
-                    <div class="faq-head">Can I share the downloaded notes with my classmates?</div>
-                    <div class="faq-body">To protect the incredible amount of work that goes into creating these visual sets, sharing and redistribution are restricted. We kindly request that every student uses their own personal account dashboard to view the materials.</div>
-                </div>
-                <div class="faq-row">
-                    <div class="faq-head">How is file access managed for the study packs?</div>
-                    <div class="faq-body">All premium review packages are shared via secure, restricted-access Google Docs channels. View-only permissions are carefully configured with background downloading, printing, and direct text-copying completely disabled to keep the files safe while allowing crisp onscreen reading.</div>
-                </div>
-                <div class="faq-row">
-                    <div class="faq-head">What happens if I miss a live whiteboard session?</div>
-                    <div class="faq-body">No worries at all! Every single one of our 4 weekly live sessions is recorded in crisp high-definition and uploaded automatically to your cloud storage folder within 2 hours so you can rewatch it at your own pace.</div>
-                </div>
-                <div class="faq-row">
-                    <div class="faq-head">Are these notes helpful for any high school exam tier?</div>
-                    <div class="faq-body">Yes, absolutely. Because the summaries are designed to teach rich conceptual biology rather than encourage simple blind memorization, they are universally incredibly helpful for IGCSE, GCSE, O-Levels, and early advanced preparation pathways.</div>
-                </div>
-                <div class="faq-row">
-                    <div class="faq-head">How do the active marking scheme keyword matches work?</div>
-                    <div class="faq-body">Instead of using dense text blocks, our map layouts color-code the precise terminology parameters required by major board examiners. This shows you exactly how to structure your answers to guarantee maximum points.</div>
-                </div>
-                <div class="faq-row">
-                    <div class="faq-head">Can I reach out with personal questions outside of class?</div>
-                    <div class="faq-body">Definitely! Every registered cohort student receives a direct backchannel invitation link to Mehar's academic WhatsApp profile for quick asynchronous conceptual clarifications whenever you hit a bump in your study schedule.</div>
-                </div>
-                <div class="faq-row">
-                    <div class="faq-head">How are payments processed for the weekly classes?</div>
-                    <div class="faq-body">Classes are tracked neatly at $10 per interactive student hour and are billed as transparent, recurring monthly packages so families can easily plan and manage their academic supplement schedules.</div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 The Mehar Method. Custom Built for IGCSE Biology Standards. Hosted via GitHub Pages.</p>
+      <div class="grid-3">
+        <div class="card-glass">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          </div>
+          <h3>In-Depth Yet Concise</h3>
+          <p>Entire textbook sub-units are structured into modular tracking summaries that leave zero core concepts omitted.</p>
         </div>
-    </footer>
+        <div class="card-glass">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24"><path d="M12 21.35L10.55,20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.41 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.59 3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.04L12,21.35Z"/></svg>
+          </div>
+          <h3>Anatomical Precision</h3>
+          <p>Clean vector lines outlining physiological loops — vascular channels, reflex arcs, gene pairs — for effortless retention.</p>
+        </div>
+        <div class="card-glass">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+          </div>
+          <h3>Marking Scheme Match</h3>
+          <p>Every map element traces examiner marking trends, showing you the vital keywords to target on paper.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- register -->
+    <section class="section" id="register">
+      <div class="section__title">
+        <h2>Join the Ecosystem</h2>
+        <p>Secure custom resources or apply for direct accelerated interactive batches below.</p>
+      </div>
+
+      <div class="admission-card">
+        <div class="price-block">
+          <div class="price">$10 <span>/ Resource Unit Base</span></div>
+          <div class="sub">Tutoring Track: $10/Hr &bull; Complete Visual Notes: $10</div>
+        </div>
+
+        <ul class="syllabus">
+          <li>4 Weekly Live Accelerated Whiteboard Masterclasses</li>
+          <li>Full Access to Premium Visual IGCSE Biology Notes</li>
+          <li>Direct WhatsApp Messenger Channel with Mehar</li>
+          <li>Notes built around core marking schemes to hit every keyword</li>
+        </ul>
+
+        <form action="https://formbold.com/s/oYAkq" method="POST">
+          <input type="text" name="name" class="form-input" placeholder="Student Full Name" required>
+          <input type="email" name="email" class="form-input" placeholder="Parent/Student Email Address" required>
+          <select name="registration_type" class="form-input" required>
+            <option value="" disabled selected>Select what you are registering for:</option>
+            <option value="Live Interactive Lessons">Live Accelerated Interactive Lessons ($10/Hour)</option>
+            <option value="Complete Visual Note Packs">Complete Visual Note Packs ($10 One-time)</option>
+            <option value="Both Lessons and Notes">Full Track Bundle: Both Lessons & Notes</option>
+          </select>
+          <button type="submit" class="btn btn--primary btn--full" style="margin-top: 0.4rem;">Submit Application</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- mentor -->
+    <section class="section">
+      <div class="mentor-wrap">
+        <div class="mentor-card">
+          <div class="mentor-avatar">
+            <img src="https://i.ibb.co/FLyNft1V/Untitled-design-1.webp" alt="Mehar">
+          </div>
+          <div class="mentor-info">
+            <h4>Meet Your Mentor</h4>
+            <span class="badge">Architect of The Mehar Method</span>
+            <p>Hi, I'm Mehar. Having achieved an A* in IGCSE Biology, I founded this platform to change how we interact with science. As a high school student aspiring to become a biology Olympian, my mission is to spread deep conceptual knowledge. The Mehar Method eliminates dense text in favor of vibrant visual frameworks that make academic breakthroughs natural.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- faq -->
+    <section class="section">
+      <div class="section__title">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-item__q">Can I share the downloaded notes with my classmates?</div><div class="faq-item__a">To protect the incredible amount of work that goes into creating these visual sets, sharing and redistribution are restricted. We kindly request that every student uses their own personal account dashboard to view the materials.</div></div>
+        <div class="faq-item"><div class="faq-item__q">How is file access managed for the study packs?</div><div class="faq-item__a">All premium review packages are shared via secure, restricted-access Google Docs channels. View-only permissions are carefully configured with background downloading, printing, and direct text-copying completely disabled to keep the files safe while allowing crisp onscreen reading.</div></div>
+        <div class="faq-item"><div class="faq-item__q">What happens if I miss a live whiteboard session?</div><div class="faq-item__a">No worries at all! Every single one of our 4 weekly live sessions is recorded in crisp high-definition and uploaded automatically to your cloud storage folder within 2 hours so you can rewatch it at your own pace.</div></div>
+        <div class="faq-item"><div class="faq-item__q">Are these notes helpful for any high school exam tier?</div><div class="faq-item__a">Yes, absolutely. Because the summaries are designed to teach rich conceptual biology rather than encourage simple blind memorization, they are universally incredibly helpful for IGCSE, GCSE, O-Levels, and early advanced preparation pathways.</div></div>
+        <div class="faq-item"><div class="faq-item__q">How do the active marking scheme keyword matches work?</div><div class="faq-item__a">Instead of using dense text blocks, our map layouts color-code the precise terminology parameters required by major board examiners. This shows you exactly how to structure your answers to guarantee maximum points.</div></div>
+        <div class="faq-item"><div class="faq-item__q">Can I reach out with personal questions outside of class?</div><div class="faq-item__a">Definitely! Every registered cohort student receives a direct backchannel invitation link to Mehar's academic WhatsApp profile for quick asynchronous conceptual clarifications whenever you hit a bump in your study schedule.</div></div>
+        <div class="faq-item"><div class="faq-item__q">How are payments processed for the weekly classes?</div><div class="faq-item__a">Classes are tracked neatly at $10 per interactive student hour and are billed as transparent, recurring monthly packages so families can easily plan and manage their academic supplement schedules.</div></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      &copy; 2026 The Mehar Method. Custom Built for IGCSE Biology Standards. Hosted via GitHub Pages.
+    </div>
+  </footer>
 
 </body>
 </html>
